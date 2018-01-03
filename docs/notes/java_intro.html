@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+<link rel="stylesheet" href="https://skiadas.github.io/css/course.css" type="text/css" />
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+<body>
+<h1 id="brief-introduction-to-java">Brief Introduction to Java</h1>
+<p>In this section we briefly discuss the Java programming language. We assume that the reader has already been exposed to basic programming in C++, including the object-oriented programming features of C++.</p>
+<h2 id="reading">Reading</h2>
+<p>This is a list of various books for learning Java. Use them as reference</p>
+<ul>
+<li><a href="http://shop.oreilly.com/product/9780596009205.do">Head First Java</a>.</li>
+<li><a href="https://www.amazon.com/dp/0321356683">Effective Java</a>.</li>
+<li><a href="https://www.amazon.com/Core-Java-I-Fundamentals-10th/dp/0134177304">Core Java I</a> and <a href="https://www.amazon.com/Core-Java-II-Advanced-Features-10th">II</a>. Comprehensive, good for reference. Highly recommended as a book to add to your bookshelf.</li>
+<li><a href="https://docs.oracle.com/javase/tutorial/index.html">Java Tutorials online</a>.</li>
+<li><a href="http://www.horstmann.com/ccc/c_to_java.pdf">A crash course from C++ to Java</a>.</li>
+<li><a href="https://docs.oracle.com/javase/8/docs/api/">Java 8 API</a>.</li>
+</ul>
+<h2 id="java-language-basics">Java Language Basics</h2>
+<h3 id="syntax">Syntax</h3>
+<p>Java has borrowed a lot of syntax from C++, aiming to make the transition easier C++ programmers:</p>
+<ul>
+<li>We use semicolons to indicate the end of statements, and curly braces <code>{ ... }</code> to group statements together into blocks.</li>
+<li>Conditional <code>if-then-else</code> expressions, <code>for</code>, <code>while</code> and <code>do-while</code> blocks and <code>switch</code> statements are all similar to C.</li>
+<li>There are eight <em>primitive</em> types: four integer number types (<code>byte</code>, <code>short</code>, <code>int</code>, <code>long</code>), each with fixed sizes, two floating point number types (<code>float</code> and <code>double</code>), a single character type <code>char</code>, and a <code>boolean</code> type with values <code>true</code> and <code>false</code>.</li>
+<li>Standard arithmetic <a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/operators.html">operators</a> are similar in Java as in C.</li>
+<li>There is a <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Math.html?is-external=true">standard math library</a></li>
+<li>The language is statically typed, and every variable must have a type that is specified when the variable is declared. In particular, a variable cannot be assigned before it has been declared, and it cannot be used before it has been assigned a value.</li>
+<li>There is a <code>null</code> value that is analogous to the null pointer in C++.</li>
+<li>We can form arrays of values of specific length, and a shorthand notation can be used to initialize such an array with values: <code>int[] a = { 1, 4, 5 };</code></li>
+<li>Everything else is an object of some class. Classes are capitalized: <code>Item</code>, <code>LinkedList</code>, <code>Vertex</code>, <code>Person</code>. Class constructors are used to create new objects: <code>Person aPerson = new Person(&quot;Peter&quot;);</code></li>
+<li>Java has exceptions that we can use to indicate that something went terribly wrong with our code.</li>
+<li>Code is organized via functions (though they are always associated with a class as we will see later), and the types of the function arguments determine which code will be executed (i.e. two functions can have the same name but different parameter types).</li>
+<li>In Java, like in C++, we can have <em>static</em> class methods and properties, indicated via the keyword <code>static</code>, and we can classify all object and class methods and properties as <em>public</em> or <em>private</em> (or also <em>protected</em>).</li>
+<li>You can specify a property to be <em>constant</em> by using the keyword <code>final</code>. Constant properties are typically written in all capital letters.</li>
+</ul>
+<p>There are also a number of differences:</p>
+<ul>
+<li><em>Strings</em> in Java are not just arrays of characters. They are objects that you handle like other objects. They are <em>immutable</em>, so you cannot simply change a part of a string. You can however create a new string by concatenating together two other strings. Also, a powerful <code>StringBuilder</code> class is used when you want to incrementally build a string from smaller components.</li>
+<li>Java offers a second, more convenient, form of the <code>for</code> loop, often called the “foreach” loop, where you iterate over the elements of an array or list, rather than the indices: <code>for (Item item : listOfItems) { ... do something with item ... }</code>. This is a safer iteration approach, as you don’t have to worry about running outside the array bounds, and it also works for other iterable structures that are not technically arrays. It is in many ways similar to Python’s <code>for-in</code> loop.</li>
+<li>Java has no pointers. In most instances where you would have used a pointer, you just don’t, and Java handles it all behind the scenes for you. Everything that is not a primitive type is in effect a reference to an object. Equality between objects (<code>==</code>) tests quite literally if the objects occupy the same place in memory. Most classes also implement an <code>equals</code> method, that determines a more meaningful equality test (based for example on the properties of the object).</li>
+<li>Memory in Java is <em>managed</em>. An elaborate <em>garbage collection</em> mechanism is responsible for allocating and releasing the memory when needed. You never have to worry about memory leaks.</li>
+<li>All functions in Java are in fact <em>methods</em> of an object, or static class methods. There are no free-standing functions.</li>
+<li>Java uses <em>interfaces</em>, which are somewhat similar to the <code>.h</code> files in C++. An interface specifies a set of methods that a class should <em>implement</em> in order to claim that it obeys this interface. Interfaces are used to enforce certain behaviors: For instance any class that implements the <code>Stack</code> interface must provide certain methods for <em>popping</em> from the stack, <em>pushing</em> onto the stack etc.</li>
+<li>Java uses <em>generics</em>, which are somewhat analogous to C++ templates, to allow collection classes to be implemented without regard to the particular type of their contents (i.e. we can have a list that contains <code>Person</code> objects, or a list that contains <code>Vertex</code> objects, and we only have to write the code once). So for example the <code>ArrayList</code> class is usually written as <code>ArrayList&lt;E&gt;</code> where <code>E</code> is some other class indicating the contents of the list. A list of strings for example would be <code>ArrayList&lt;String&gt;</code>.</li>
+<li>Java code is not compiled into machine code directly. It is compiled into a low level language called <em>Java bytecode</em>, and it is then interpreted by the <em>Java Virtual Machine</em> (JVM). This makes the code much more portable: Compiled Java code can run on any system that has the JVM.</li>
+</ul>
+</body>
+</html>
