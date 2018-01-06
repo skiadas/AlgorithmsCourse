@@ -2,16 +2,173 @@
 
 A week-by-week breakdown of the material.
 
-## Week  1 (09/04-09/09)
+## Week  1 (01/08-01/12)
 
 Mon
-  ~
+  ~ [Introduction to Algorithms (1.1, 1.2, 1.3)](notes/intro.md)
+
+    [Activity Sheet](activities/activities1-intro.md)
 
 Wed
   ~ [Brief intro to Java](notes/java_intro.md)
 
-    [Assignment 1](assignments/assignment1.md)
+    [Lab Assignment 1](assignments/assignment1.md)
 
 Fri
-  ~
+  ~ [Continue Lab Assignment 1](assignments/assignment1.md)
 
+    [Review of Data Structures](notes/data_structures.md)
+
+## Week  2 (01/15-01/19)
+
+Mon
+  ~ Analysis Framework and Asymptotic Notation (2.1, 2.2)
+
+Wed
+  ~ Analysis of nonrecursive algorithms (2.3)
+
+Fri
+  ~ Analysis of recursive algorithms (2.4, 2.5)
+
+## Week  3 (01/22-01/26)
+
+Mon
+  ~ Brute-Force Algorithms (3.1, 3.2)
+
+Wed
+  ~ Exhaustive Search (3.4)
+
+Fri
+  ~ Depth-first search and breadth-first search (3.5)
+
+    Lab Assignment 2: Graph search
+
+## Week  4 (01/29-02/02)
+
+Mon
+  ~ Decrease-by-one algorithms (4.1, 4.2)
+
+Wed
+  ~ Decrease-by-one algorithms continued (4.1, 4.2)
+
+Fri
+  ~ Decrease-by-constant-factor algorithms (4.4)
+
+## Week  5 (02/05-02/09)
+
+Mon
+  ~ Variable size decrease algorithms (4.5)
+
+Wed
+  ~ Review/catchup
+
+Fri
+  ~ Midterm 1 (Chapters 1-4)
+
+## Week  6 (02/12-02/16)
+
+Mon
+  ~ Divide-and-conquer algorithms (5.1, 5.2)
+
+    Lab Assignment 3: ?
+
+Wed
+  ~ Divide-and-conquer algorithms continued (5.1, 5.2)
+
+Fri
+  ~ Other divide and conquer (5.3)
+
+## Week  7 (02/19-02/23)
+
+Mon
+  ~ Instance simplification algorithms (6.1)
+
+Wed
+  ~ Balanced Search Threes (6.3)
+
+Fri
+  ~ Representation change: Heaps and Heapsort (6.4)
+
+    Lab Assignment 4: heaps (and/or balanced search trees)
+
+## Week  8 (02/26-03/02)
+
+Mon
+  ~ BREAK
+
+Wed
+  ~ BREAK
+
+Fri
+  ~ BREAK
+
+## Week  9 (03/05-03/09)
+
+Mon
+  ~ Problem reduction techniques (6.6)
+
+Wed
+  ~ Space-time tradeoffs: Hashing (7.3)
+
+Fri
+  ~ Space-time tradeoffs: B-trees (7.3)
+
+    Lab Assignment 5: String Matching  (or Hashing?)
+
+## Week  10 (03/12-03/16)
+
+Mon
+  ~ Review/Catchup
+
+Wed
+  ~ Dynamic Programming Algorithms, and Knapsack (8.1-8.2)
+
+Fri
+  ~ Midterm 2 (Chapters 5-7)
+
+## Week  11 (03/19-03/23)
+
+Mon
+  ~ Dynamic Programming: Optimal Binary Search Trees (8.3)
+
+Wed
+  ~ Dynamic Programming: All Pairs Shortest Paths (8.4)
+
+Fri
+  ~ Greedy Algorithms: Prim's (9.1)
+
+## Week  12 (03/26-03/30)
+
+Mon
+  ~ Greedy Algorithms: Kruskal's, Union-Find (9.2)
+
+Wed
+  ~ Greedy Algorithms: Dijkstra (9.3)
+
+    Lab Assignment 6: Greedy Graph Algorithms
+
+Fri
+  ~ Iterative Improvement: Maximum-Flow Problem (10.2)
+
+
+## Week  13 (04/01-04/06)
+
+Mon
+  ~ Iterative Improvement: Maximum Bipartite Matching (10.3)
+
+Wed
+  ~ Limitations of Algorithm Power (11.1, 11.2)
+
+Fri
+  ~ P, NP and NP-Complete Problems (11.3)
+
+## Week  14 (04/09-04/13)
+
+Mon
+  ~ Backtracking, Branch-and-bound (12.1, 12.2)
+
+Wed
+  ~ Review/Catchup
+
+Fri
+  ~ Review (Final on chapters 8-12)
