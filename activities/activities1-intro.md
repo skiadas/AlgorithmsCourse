@@ -3,7 +3,7 @@
 Manager
   ~ name:
 
-Reporter
+Recorder
   ~ name:
 
 Speaker
