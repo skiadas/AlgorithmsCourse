@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+<link rel="stylesheet" href="https://skiadas.github.io/css/course.css" type="text/css" />
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+<body>
+<h1 id="the-algorithm-analysis-framework">The Algorithm Analysis Framework</h1>
+<ul>
+<li>Read 2.1, pages 42-50
+<ul>
+<li>What are the two kinds of <strong>efficiency</strong> we consider? What does each measure?</li>
+<li>Which of those efficiencies will we focus more on? Why?</li>
+<li>True or False: For most algorithms, the runtime is more or less independent of the input, they run for about the same time regardless of the input.</li>
+<li>Discuss some situations where there are multiple choices for what we might call the problem’s <strong>input size</strong>?</li>
+<li>How do we measure the input size in the case where the input is a number? Why does that make sense?</li>
+<li>Why do we not use a normal unit like milliseconds to measure the running time of an algorithm?</li>
+<li>What do we refer to as the <strong>basic operation</strong> of an algorithm? Why do we choose to measure running time by counting the number of basic operations, rather than some other metric?</li>
+<li>When considering the runtime of an algorithm we often ignore multiplicative constants. Why is that?</li>
+<li>What do we mean when we talk about <strong>order of growth</strong>?</li>
+<li>Study table 2.1. How do you expect each of the numbers to change if we look at the next <span class="math inline">\(n\)</span> power, <span class="math inline">\(10^7\)</span>?</li>
+<li>If a computer performs a trillion (<span class="math inline">\(10^{12}\)</span>) operations a second, how long (in years) would it take such a computer to perform <span class="math inline">\(50!\)</span> operations (this is about <span class="math inline">\(3.04\cdot 10^{64}\)</span> operations)?</li>
+<li>What effect does doubling the input size <span class="math inline">\(n\)</span> have for each of the functions in Table 2.1? Remember that the functions are meant to represent the running time of an algorithm.</li>
+<li>Explain what the terms <strong>worst-case efficiency</strong>, <strong>best-case efficiency</strong> and **average-case efficiency* mean. Demonstrate in the example of the sequential search algorithm described in the text.
+<ul>
+<li>What is the importance of the worst-case efficiency?</li>
+<li>What is the importance of the average-case efficiency?</li>
+<li>Explain how the average-case efficiency was computed for the example of sequential search, and what assumptions were made.</li>
+<li>Why can we not compute the average-case efficiency by simply averaging the worst-case and the best-case?</li>
+</ul></li>
+<li>What do we call <strong>amortized efficiency</strong> for an algorithm?</li>
+<li>Practice problems: 2.1.1, 2.1.3, 2.1.7</li>
+<li>Challenge/Fun: 2.1.4, 2.1.10</li>
+</ul></li>
+<li>Read 2.2, pages 52-58
+<ul>
+<li>Informally, what do the notations <span class="math inline">\(O(g(n))\)</span>, <span class="math inline">\(\Omega(g(n))\)</span>, <span class="math inline">\(\Theta(g(n))\)</span> mean?
+<ul>
+<li>True or False: <span class="math inline">\(2n^2(n-1) \in O(n^2)\)</span></li>
+<li>True or False: <span class="math inline">\(2n^2(n-1) \in \Omega(n^2)\)</span></li>
+<li>True or False: <span class="math inline">\(2n^2(n-1) \in \Theta(n^2)\)</span></li>
+</ul></li>
+<li>Provide formal definitions for <span class="math inline">\(O(g(n))\)</span>, <span class="math inline">\(\Omega(g(n))\)</span>, <span class="math inline">\(\Theta(g(n))\)</span>.
+<ul>
+<li>True of False: If <span class="math inline">\(t(n)\in O(g(n))\)</span> and <span class="math inline">\(t(n)\in \Omega(g(n))\)</span> then we also have <span class="math inline">\(t(n)\in\Theta(g(n))\)</span>.</li>
+<li>True or False: If <span class="math inline">\(t(n)\in O(g(n))\)</span> and <span class="math inline">\(c\)</span> is a constant number, then <span class="math inline">\(ct(n)\in O(g(n))\)</span> also.</li>
+</ul></li>
+<li>Explain the theorem on page 56: If <span class="math inline">\(t_1(n) \in O(g_1(n))\)</span> and <span class="math inline">\(t_2(n) \in O(g_2(n))\)</span>, then <span class="math inline">\(t_1(n) + t_2(n)\in O(\max{c_1(g), c_2(g)})\)</span>.
+<ul>
+<li>What important implication does this have on the analysis of an algorithm?</li>
+</ul></li>
+<li>Study Table 2.2 on common basic efficiency classes and when they occur.</li>
+<li>Practice problems: 2.2.2, 2.2.3, 2.2.5</li>
+</ul></li>
+</ul>
+</body>
+</html>

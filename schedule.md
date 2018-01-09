@@ -22,7 +22,7 @@ Fri
 ## Week  2 (01/15-01/19)
 
 Mon
-  ~ Analysis Framework and Asymptotic Notation (2.1, 2.2)
+  ~ [Analysis Framework and Asymptotic Notation (2.1, 2.2)](notes/analysis_framework.md)
 
 Wed
   ~ Analysis of nonrecursive algorithms (2.3)

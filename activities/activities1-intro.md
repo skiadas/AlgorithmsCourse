@@ -9,8 +9,6 @@ Recorder
 Speaker
   ~ name:
 
-## Questions
-
 ### Section 1.1
 
 1. For two positive numbers $m$, $n$, assuming $m > n$, the greatest common divisor of $m$ and $n$ is the same as the greatest common divisor of $n$ and $m-n$. Use this idea to devise an algorithm for computing the greatest common divisor of two numbers.
