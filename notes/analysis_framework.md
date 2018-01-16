@@ -13,7 +13,7 @@
     - Study table 2.1. How do you expect each of the numbers to change if we look at the next $n$ power, $10^7$?
     - If a computer performs a trillion ($10^{12}$) operations a second, how long (in years) would it take such a computer to perform $50!$ operations (this is about $3.04\cdot 10^{64}$ operations)?
     - What effect does doubling the input size $n$ have for each of the functions in Table 2.1? Remember that the functions are meant to represent the running time of an algorithm.
-    - Explain what the terms **worst-case efficiency**, **best-case efficiency** and **average-case efficiency* mean. Demonstrate in the example of the sequential search algorithm described in the text.
+    - Explain what the terms **worst-case efficiency**, **best-case efficiency** and **average-case efficiency** mean. Demonstrate in the example of the sequential search algorithm described in the text.
         - What is the importance of the worst-case efficiency?
         - What is the importance of the average-case efficiency?
         - Explain how the average-case efficiency was computed for the example of sequential search, and what assumptions were made.
