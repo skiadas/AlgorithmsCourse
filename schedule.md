@@ -22,42 +22,50 @@ Fri
 ## Week  2 (01/15-01/19)
 
 Mon
-  ~ [Analysis Framework and Asymptotic Notation (2.1, 2.2)](notes/analysis_framework.md)
+  ~ [Activity Sheet 1](activities/activities1-intro.md)
 
 Wed
-  ~ Analysis of nonrecursive algorithms (2.3)
+  ~ [Analysis Framework and Asymptotic Notation (2.1, 2.2)](notes/analysis_framework.md)
+
+    [Activity Sheet 2](activities/activities2-framework.md)
 
 Fri
-  ~ Analysis of recursive algorithms (2.4, 2.5)
+  ~ Analysis of nonrecursive algorithms (2.3)
+
+    [Lab Assignment 1 due](assignments/assignment1.md)
 
 ## Week  3 (01/22-01/26)
 
 Mon
-  ~ Brute-Force Algorithms (3.1, 3.2)
+  ~ Analysis of recursive algorithms (2.4, 2.5)
+
+    [Homework 1 Due](assignments/hwassignment1.md)
 
 Wed
-  ~ Exhaustive Search (3.4)
+  ~ Brute-Force Algorithms (3.1, 3.2)
 
 Fri
-  ~ Depth-first search and breadth-first search (3.5)
-
-    Lab Assignment 2: Graph search
+  ~ Exhaustive Search (3.4)
 
 ## Week  4 (01/29-02/02)
 
 Mon
-  ~ Decrease-by-one algorithms (4.1, 4.2)
+  ~ Depth-first search and breadth-first search (3.5)
+
+    Lab Assignment 2: Graph search
 
 Wed
-  ~ Decrease-by-one algorithms continued (4.1, 4.2)
+  ~ Decrease-by-one algorithms (4.1, 4.2)
 
 Fri
-  ~ Decrease-by-constant-factor algorithms (4.4)
+  ~ Decrease-by-one algorithms continued (4.1, 4.2)
 
 ## Week  5 (02/05-02/09)
 
 Mon
-  ~ Variable size decrease algorithms (4.5)
+  ~ Decrease-by-constant-factor algorithms (4.4)
+
+    Variable size decrease algorithms (4.5)
 
 Wed
   ~ Review/catchup

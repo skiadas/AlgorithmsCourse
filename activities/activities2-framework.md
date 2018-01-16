@@ -18,13 +18,15 @@ Speaker
     \vfill
     c. What would be the worst-case and best-case efficiencies of the algorithm you found for this problem? Explain. Can you also figure out the average-case efficiency?
     \vfill
-    \newpage
 2. Exercise 2.1.8: For each of the following functions, determine how much the value will change if the parameter $n$ is increased fourfold: $\log_2 n$, $\sqrt{n}$, $n$, $n^2$, $n^3$, $2^n$.
     \vfill
+    \newpage
 
 ### Section 2.2
 
-3. Exercise 2.2.1: Using the appropriate notation, indicate the time efficiency of sequential search in the worst case, the best case and the average case.
-\vfill
-4. Looking back at book problem 1.1.5, as in the first activity above: In terms of the sizes $n$ and $m$ of the two lists, describe the worst-case efficiency of the algorithm you found.
-\vfill
+3. Exercise 2.2.10 extended: The **range** of a finite nonempty set of real numbers is defined as the difference of the largest minus the smallest. We can represent such a set in at least four different ways. For each way describe the algorithm for finding the range of the set and, decide what the time efficiency class of that algorithm is.
+  a. Unsorted array
+  b. Sorted array
+  c. Sorted singly linked list
+  d. Sorted doubly linked list
+  e. Binary search tree
