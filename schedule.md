@@ -30,7 +30,9 @@ Wed
     [Activity Sheet 2](activities/activities2-framework.md)
 
 Fri
-  ~ Analysis of nonrecursive algorithms (2.3)
+  ~ [Analysis of nonrecursive algorithms (2.3)](notes/analysis_nonrecursive.md)
+
+    [Activity Sheet 3](activities/activities3-analysis.md)
 
     [Lab Assignment 1 due](assignments/assignment1.md)
 

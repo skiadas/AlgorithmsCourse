@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+<link rel="stylesheet" href="https://skiadas.github.io/css/course.css" type="text/css" />
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+<body>
+<h1 id="analysis-of-recursive-algorithms">Analysis of Recursive algorithms</h1>
+<ul>
+<li>Read 2.4, pages 70-76
+<ul>
+<li>Study the algorithm in Example 1, for computing the factorial function.
+<ul>
+<li>What do we consider as the problem’s size? Why is this not entirely correct?</li>
+<li>What do we consider as the algorithm’s basic operation?</li>
+<li>Explain the recurrence relation, at the top of page 71, for the number <span class="math inline">\(M(n)\)</span> of multiplications needed to compute the <span class="math inline">\(n\)</span>-th fibonacci number.</li>
+<li>What else do we need in addition to the recurrence relation, in order to compute <span class="math inline">\(M(n)\)</span>? Where is that number coming from?</li>
+<li>Why is <span class="math inline">\(M(0) = 0\)</span>?</li>
+<li>Use the <em>method of backward substitutions</em> to solve this recurrence relation.</li>
+</ul></li>
+<li>What are the five steps followed in the plan to analyze the time efficiency of recursive algorithms? Where does it differ with the plan for non-recursive algorithms?</li>
+<li>Study the Towers of Hanoi recursive algorithm in Example 2.
+<ul>
+<li>Explain the recurrence relation for the number <span class="math inline">\(M(n)\)</span> of moves needed, described at the top of page 74.</li>
+<li>Use the <em>method of backward substitutions</em> to solve this recurrence relation.</li>
+<li>Look at the tree-based description at the bottom of page 75. How does that computation relate to the computation of <span class="math inline">\(M(n)\)</span> you just did? Do they count the same things?</li>
+</ul></li>
+<li>Study the “number of digits in binary representation” algorithm of example 3.
+<ul>
+<li>Explain why this algorithm would correctly compute the number of binary digits that the input number’s representation uses.</li>
+<li>Explain why it is enough to consider the algorithm’s time efficiency in the case where <span class="math inline">\(n\)</span> is a power of <span class="math inline">\(2\)</span>.</li>
+<li>Explain the final formula for the time efficiency class of this algorithm.</li>
+</ul></li>
+<li>Practice problems: 2.4.1, 2.4.3, 2.4.4, 2.4.9</li>
+<li>Challenge: 2.4.13, 2.4.14</li>
+</ul></li>
+</ul>
+</body>
+</html>
