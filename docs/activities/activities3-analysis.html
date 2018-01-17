@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+<link rel="stylesheet" href="https://skiadas.github.io/css/course.css" type="text/css" />
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+<body>
+<h1 id="activity-sheet-3">Activity Sheet 3</h1>
+<dl>
+<dt>Manager</dt>
+<dd>name:
+</dd>
+<dt>Recorder</dt>
+<dd>name:
+</dd>
+<dt>Speaker</dt>
+<dd>name:
+</dd>
+</dl>
+<h3 id="section-2.3">Section 2.3</h3>
+<ol style="list-style-type: decimal">
+<li><p>The following algorithm determines if an array of numbers is sorted:</p>
+<pre><code>// Input: A[0, ..., n-1]
+// Output: true or false depending on whether the array is sorted
+// Variables used: i  -- loop index
+for i = 2, ..., n-1:
+  if A[i-1] &gt; A[i]:
+    return false
+return true</code></pre>
+<ol style="list-style-type: lower-alpha">
+<li>The algorithm has one mistake in it. Correct it. </li>
+<li>Determine the input size and the basic operation for this algorithm. </li>
+<li>Compute the algorithm’s time efficiency. </li>
+</ol></li>
+</ol>
+<h3 id="section-2.4">Section 2.4</h3>
+<ol start="2" style="list-style-type: decimal">
+<li><p>The following algorithm determines the number of ones in the binary representation of a number <span class="math inline">\(n\)</span>:</p>
+<pre><code>ALGORITHM ones(n)
+  // Input: n   --- a nonnegative integer
+  // Output: The number of ones in the binary representation of n
+  if n &lt;= 1:
+    return n       // n is 0 or 1
+  else:
+    lastDigit = n mod 2        // lastDigit=1 if n is odd, lastDigit = 0 if n is odd
+    otherDigits = ones(n / 2)  // integer division here
+    return lastDigit + otherDigits</code></pre>
+<ol style="list-style-type: lower-alpha">
+<li>Demonstrate a run of this algorithm for n = 11, and confirm that it works in that instance. </li>
+<li>Determine the basic operation for this algorithm. </li>
+<li>Establish a recurrence relation for the running time of this algorithm. </li>
+<li>Use the method of backward substitutions on this recurrence to compute the running time. </li>
+</ol></li>
+</ol>
+</body>
+</html>
