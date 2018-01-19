@@ -39,7 +39,7 @@ Fri
 ## Week  3 (01/22-01/26)
 
 Mon
-  ~ Analysis of recursive algorithms (2.4, 2.5)
+  ~ [Analysis of recursive algorithms (2.4)](notes/analysis_recursive.md)
 
     [Homework 1 Due](assignments/hwassignment1.md)
 
