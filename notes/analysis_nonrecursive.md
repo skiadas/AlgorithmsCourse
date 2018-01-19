@@ -4,7 +4,6 @@
     - Consider the algorithm described in Example 1, for finding the largest element in a list of n numbers.
         - Apart from the array, what other information does the algorithm need to store in memory, i.e. how much more memory does it need to use?
         - Explain what the "basic operation" is in this case, and how we arrived at that conclusion.
-        -
         - Explain how we count how many basic operations are needed in this algorithm. What is the algorithm's time efficiency class?
     - Describe the five steps of the general plan for analyzing the time efficiency of a non-recursive algorithm, and identify those steps in the earlier example.
     - Review Appendix A (pages 475-577). You do not need to memorize those formulas, but you should familiarize yourself with them and make sure you understand what each says.

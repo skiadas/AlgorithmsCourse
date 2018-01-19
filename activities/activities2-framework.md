@@ -24,7 +24,7 @@ Speaker
 
 ### Section 2.2
 
-3. Exercise 2.2.10 extended: The **range** of a finite nonempty set of real numbers is defined as the difference of the largest minus the smallest. We can represent a set of numbers in at least four different ways. For each way describe the algorithm for finding the range of the set, and decide what the time efficiency class of that algorithm is.
+3. Exercise 2.2.10 extended: The **range** of a finite nonempty set of real numbers is defined as the difference of the largest minus the smallest. We can represent a set of numbers in at least five different ways. For each way describe the algorithm for finding the range of the set, and decide what the time efficiency class of that algorithm is.
   a. Unsorted array
   b. Sorted array
   c. Sorted singly linked list
