@@ -44,7 +44,9 @@ Mon
     [Homework 1 Due](assignments/hwassignment1.md)
 
 Wed
-  ~ Brute-Force Algorithms (3.1, 3.2)
+  ~ [Brute-Force Algorithms (3.1)](notes/brute_force.md)
+
+    [Activity Sheet 4](activities/activities4-bruteForce.md)
 
 Fri
   ~ Exhaustive Search (3.4)
