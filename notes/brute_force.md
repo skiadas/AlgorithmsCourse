@@ -10,9 +10,7 @@
         - What does the variable `min` represent in the loop? Be precise.
         - At intermediate steps of the algorithm, what part of the array, if any, is sorted?
         - Study Figure 3.1 which shows a run of the algorithm. What is the meaning of the vertical lines?
-        - True or False: SelectionSort is an in-place sorting algorithm
-        - True or False: SelectionSort is a stable sorting algorithm
-        - What is the key operation in SelectionSort?
+        - Is SelectionSort an in-place algorithm? Is it a stable algorithm?
         - Analyze the time complexity of SelectionSort.
         - Is there a difference in SelectionSort between best-case and worst-case?
         - How many entry swaps are needed for SelectionSort?
@@ -24,8 +22,7 @@
         - Explain the use of the double-for loop, and in particular the indices for each loop, especially the inner loop.
         - At intermediate steps of the algorithm, what part of the array, if any, is sorted?
         - Study Figure 3.2 which shows a run of the algorithm. What is the meaning of the vertical lines?
-        - True or False: BubbleSort is an in-place sorting algorithm
-        - True or False: BubbleSort is a stable sorting algorithm
+        - Is BubbleSort an in-place algorithm? Is it a stable algorithm?
         - Analyze the time complexity of BubbleSort.
         - Is there a difference in BubbleSort between best-case and worst-case?
         - How many entry swaps are needed for BubbleSort?
