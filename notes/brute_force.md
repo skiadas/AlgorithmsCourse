@@ -2,6 +2,7 @@
 
 - Read 3.1, pages 97-101
     - What is the main idea behind the "brute force" approach?
+    - The book lists at least four possible reasons why a brute-force solution to a problem might be desirable. What are they?
     - You can see visualizations of the various sorting algorithms on this site: [https://visualgo.net](https://visualgo.net). I strongly encourage you to play around with it, and visually see the three sorting algorithms we have seen so far (Counting, Selection, Bubble).
     - Study the **SelectionSort** algorithm.
         - What is the main idea of the SelectionSort algorithm?
