@@ -49,7 +49,7 @@ Wed
     [Activity Sheet 4](activities/activities4-bruteForce.md)
 
 Fri
-  ~ Exhaustive Search (3.4)
+  ~ [Exhaustive Search (3.4)](notes/exhaustive_search.md)
 
 ## Week  4 (01/29-02/02)
 
