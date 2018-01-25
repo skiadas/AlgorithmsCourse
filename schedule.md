@@ -54,15 +54,17 @@ Fri
 ## Week  4 (01/29-02/02)
 
 Mon
-  ~ Depth-first search and breadth-first search (3.5)
+  ~ [Depth-first search (3.5)](notes/depth_first_search.md)
+
+    [Activity Sheet 5](activities/activities5-DFS.md)
 
     Lab Assignment 2: Graph search
 
 Wed
-  ~ Decrease-by-one algorithms (4.1, 4.2)
+  ~ Breadth-first search (3.5)
 
 Fri
-  ~ Decrease-by-one algorithms continued (4.1, 4.2)
+  ~ Decrease-by-one algorithms (4.1, 4.2)
 
 ## Week  5 (02/05-02/09)
 

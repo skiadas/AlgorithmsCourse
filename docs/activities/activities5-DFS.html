@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+<link rel="stylesheet" href="https://skiadas.github.io/css/course.css" type="text/css" />
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+<body>
+<h1 id="activity-sheet-5">Activity Sheet 5</h1>
+<dl>
+<dt>Manager</dt>
+<dd>name:
+</dd>
+<dt>Recorder</dt>
+<dd>name:
+</dd>
+<dt>Speaker</dt>
+<dd>name:
+</dd>
+</dl>
+<h3 id="section-3.5">Section 3.5</h3>
+<ol style="list-style-type: decimal">
+<li><p>Consider the following non-recursive algorithm for DFS:</p>
+<pre><code>// Vertices are the numbers 0, ..., n-1
+stack &lt;- an empty stack
+popCount &lt;- 0
+pushCount &lt;- 0
+  // A vertex is visited if its pushOrder value is &gt; 0
+pushOrder &lt;- array[0, ..., n-1]
+popOrder &lt;- array[0, ..., n-1]
+while true:
+    if the stack is empty:
+        if all vertices are visited:
+            return
+        v &lt;- the first unvisited vertex
+        pushCount &lt;- pushCount + 1
+        pushOrder[v] &lt;- pushCount
+        push v to stack
+    else:
+        v &lt;- peek at the top of the stack
+        if v has no unvisited adjacent vertices:
+            popCount &lt;- popCount + 1
+            popOrder[v] &lt;- popCount
+            pop v from the stack
+        else:
+            w &lt;- first unvisited adjacent vertex of v
+            pushCount &lt;- pushCount + 1
+            pushOrder[w] &lt;- pushCount
+            push w to stack</code></pre>
+Follow the algorithm for the example graph from exercise 3.5.1. Does this algorithm appear to be correct? </li>
+<li>Consider the maze on exercise 3.5.10.
+<ol style="list-style-type: lower-alpha">
+<li>Draw the corresponding graph that represents the same maze, as described in that assignment. Make sure the positioning of the vertices in the graph matches those of the maze picture. Label the vertices, starting with “a” for the entry vertex. </li>
+<li>Follow the DFS algorithm for this graph, and write down the DFS-forest, identifying forward edges and back edges, and show the two vertex orders. Also show how the stack changes over time. Single out the maze solution produced by this DFS method. </li>
+</ol></li>
+</ol>
+</body>
+</html>

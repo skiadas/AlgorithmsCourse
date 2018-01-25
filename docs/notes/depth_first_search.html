@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+<link rel="stylesheet" href="https://skiadas.github.io/css/course.css" type="text/css" />
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+<body>
+<h1 id="depth-first-search">Depth-first search</h1>
+<ul>
+<li>Read 3.5, pages 122-125
+<ul>
+<li>Describe the basic idea of the depth-first search approach to traversing the vertices of a graph.</li>
+<li>When does a vertex become <strong>visited</strong>? When does it become a <strong>dead-end</strong>?</li>
+<li>Explain why one might want to use a <em>stack</em> to keep track of the vertices as they are being visited.</li>
+<li>The presence of the stack suggests two kinds of orders to the vertices, visually shown in part b of Figure 3.10. Explain what those two orders are.
+<ul>
+<li>Explain which of these orders the <code>count</code> variable in the algorithm tracks.</li>
+</ul></li>
+<li>Looking at the graph of Exercise 3.5.1, carry out the BFS process following the alphabetical ordering of the edges.</li>
+<li>What graph do we refer to as the <strong>depth-first search forest</strong> of a DFS search?</li>
+<li>What edges of the original graph do we refer to as <strong>tree edges</strong> and which do we refer to as <strong>back edges</strong>?</li>
+<li>Carry out the construction of the depth-first search forest for the graph from exercise 3.5.1.</li>
+<li>Repeat the process for the same graph but now using reverse alphabetical ordering (so <span class="math inline">\(g\)</span> is the vertex that is visited first).</li>
+<li>Is the algorithm in the book about DFS recursive or non-recursive?</li>
+<li>True or False: When starting from a root vertex, all vertices within the same connected component as that vertex will be visited within that iteration and no other vertices will be visited (unless we restart from a new vertex).</li>
+<li>True or False: The original graph has a cycle if and only if we end up having “back edges”.</li>
+<li>Explain the run-time efficiency of <span class="math inline">\(\Theta(|V|+|E|)\)</span> for the DFS algorithm (Hint: How many times are each vertex and each edge visited?).</li>
+</ul></li>
+</ul>
+</body>
+</html>
