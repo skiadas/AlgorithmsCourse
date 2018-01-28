@@ -62,7 +62,7 @@ You should make a new *commit* in GitKraken after completing each self-contained
 
 When you are done with the assignment, in order to "submit" it, simply **push** your commits via GitKraken. These will now be posted on your account in GitLab and I will be able to follow them from there.
 
-**Important**: This assignment assumes that you have a working `DLList` implementation from the first assignment. If that is not the case, talk to me about replacing uses of `DLList` with the Java class `LinkedList`.
+**Important**: This assignment requires you to use lists at some point. You may use your `DLList` implementation if you like, or use `ArrayList` or `LinkedList`.
 
 ### The structure of the files
 
