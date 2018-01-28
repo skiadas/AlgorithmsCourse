@@ -58,7 +58,7 @@ Mon
 
     [Activity Sheet 5](activities/activities5-DFS.md)
 
-    Lab Assignment 2: Graph search
+    [Lab Assignment 2: Graph search](assignments/assignment2.md)
 
 Wed
   ~ Breadth-first search (3.5)
