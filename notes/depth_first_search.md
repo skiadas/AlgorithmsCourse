@@ -6,7 +6,7 @@
     - Explain why one might want to use a *stack* to keep track of the vertices as they are being visited.
     - The presence of the stack suggests two kinds of orders to the vertices, visually shown in part b of Figure 3.10. Explain what those two orders are.
         - Explain which of these orders the `count` variable in the algorithm tracks.
-    - Looking at the graph of Exercise 3.5.1, carry out the BFS process following the alphabetical ordering of the edges.
+    - Looking at the graph of Exercise 3.5.1, carry out the DFS process following the alphabetical ordering of the edges.
     - What graph do we refer to as the **depth-first search forest** of a DFS search?
     - What edges of the original graph do we refer to as **tree edges** and which do we refer to as **back edges**?
     - Carry out the construction of the depth-first search forest for the graph from exercise 3.5.1.
