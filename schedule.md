@@ -76,6 +76,8 @@ Mon
 
     Variable size decrease algorithms (4.5)
 
+    [Homework 2 Due](assignments/hwassignment2.md)
+
 Wed
   ~ Review/catchup
 

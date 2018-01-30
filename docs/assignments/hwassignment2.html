@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+<link rel="stylesheet" href="https://skiadas.github.io/css/course.css" type="text/css" />
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+<body>
+<h1 id="homework-assignment-2">Homework Assignment 2</h1>
+<ol style="list-style-type: decimal">
+<li>Write a version of the SelectionSort algorithm that works in reverse, i.e. it starts building the array from the other end, first correctly placing the maximum element, then correctly placing the element before that etc. The resulting array will still be sorted in increasing order, but it should be “constructed” from right to left as opposed to left-to-right.</li>
+<li><p>The following algorithm computes <span class="math inline">\(a^n\)</span>.</p>
+<pre><code>power(a, n):
+    if n &lt;- 0:
+        return 1
+    else:
+        m &lt;- n div 2
+        b &lt;- a * a
+        if n is even:
+            return power(b, m)
+        else:
+            return power(b, m) * a</code></pre>
+Using algorithmic analysis, determine the number of multiplications that this algorithm performs as a function of <span class="math inline">\(n\)</span>. You may find it helpful to restrict your analysis to the cases where <span class="math inline">\(n\)</span> is a power of <span class="math inline">\(2\)</span>.</li>
+<li>A modern processor can perform around <span class="math inline">\(2\times 10^9\)</span> operations per second. Estimate how much time it would take us to perform a calculation whose number of operations needed is given by the following functions, when <span class="math inline">\(n=30\)</span> and when <span class="math inline">\(n=40\)</span>.
+<ol style="list-style-type: lower-alpha">
+<li><span class="math inline">\(2^n\)</span></li>
+<li><span class="math inline">\(n!\)</span></li>
+<li><span class="math inline">\(n^{30}\)</span></li>
+</ol></li>
+</ol>
+</body>
+</html>
