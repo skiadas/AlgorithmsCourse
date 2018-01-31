@@ -65,21 +65,23 @@ Wed
 
 
 Fri
-  ~ Breadth-first search (3.5)
+  ~ [Breadth-first search (3.5)](notes/breadth_first_search.md)
 
-    Decrease-by-one algorithms (4.1, 4.2)
+    [Decrease-by-one algorithms: Insertion Sort (4.1)](notes/decrease_by_one_insertion.md)
 
 ## Week  5 (02/05-02/09)
 
 Mon
-  ~ Decrease-by-constant-factor algorithms (4.4)
+  ~ Decrease-by-one algorithms: Topological Sort (4.2)
 
-    Variable size decrease algorithms (4.5)
+    Decrease-by-constant-factor algorithms (4.4)
 
     [Homework 2 Due](assignments/hwassignment2.md)
 
 Wed
-  ~ Review/catchup
+  ~ Variable size decrease algorithms (4.5)
+
+    Review/catchup
 
 Fri
   ~ Midterm 1 (Chapters 1-4)
