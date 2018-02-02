@@ -72,32 +72,33 @@ Fri
 ## Week  5 (02/05-02/09)
 
 Mon
-  ~ Decrease-by-one algorithms: Topological Sort (4.2)
+  ~ [Decrease-by-one algorithms: Topological Sort (4.2)](notes/decrease_by_one_topological.md)
 
-    Decrease-by-constant-factor algorithms (4.4)
+    [Activity Sheet 6](activities/activities6-TopologicalSort.md)
 
     [Homework 2 Due](assignments/hwassignment2.md)
 
 Wed
-  ~ Variable size decrease algorithms (4.5)
+  ~ Decrease-by-constant-factor algorithms (4.4)
 
-    Review/catchup
+    Variable size decrease algorithms (4.5)
 
 Fri
-  ~ Midterm 1 (Chapters 1-4)
+  ~ Review/catchup
 
 ## Week  6 (02/12-02/16)
 
 Mon
-  ~ Divide-and-conquer algorithms (5.1, 5.2)
-
-    Lab Assignment 3: ?
+  ~ Midterm 1 (Chapters 1-4)
 
 Wed
-  ~ Divide-and-conquer algorithms continued (5.1, 5.2)
+  ~  Divide-and-conquer algorithms (5.1)
 
+     Lab Assignment 3: ?
 Fri
-  ~ Other divide and conquer (5.3)
+  ~ Divide-and-conquer algorithms continued (5.2)
+
+    Other divide and conquer (5.3)
 
 ## Week  7 (02/19-02/23)
 

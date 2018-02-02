@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+<link rel="stylesheet" href="https://skiadas.github.io/css/course.css" type="text/css" />
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+<body>
+<h1 id="decrease-by-one-algorithms-topological-sort">Decrease-by-one algorithms: Topological Sort</h1>
+<ul>
+<li>Read 4.2, pages 138-141
+<ul>
+<li>How does DFS for a directed graph differ from one for an undirected graph?
+<ul>
+<li>Are <em>cross edges</em> in this section the same as the cross edges for BFS?</li>
+</ul></li>
+<li>True or False: The presence of a forward edge indicates the presence of a directed cycle.</li>
+<li>What graphs to do we call <strong>directed acyclic graphs</strong> (dag)?</li>
+<li>Explain how we can represent the set of courses a student has to take for a major as dag.</li>
+<li>What do we refer to as a <strong>topological sort</strong> of a dag?
+<ul>
+<li>Why does this only make sense for dags and not for all directed graphs?</li>
+</ul></li>
+<li>Give some real life examples where a topological sort might be needed.</li>
+<li>Construct at least two different topological sorts of the dag in Figure 4.6.
+<ul>
+<li>How many different topological sorts can you construct?</li>
+</ul></li>
+<li>Explain how DFS can help us construct a topological sort. Make sure to also explain why the resulting order is for sure a topological sort.</li>
+<li>Describe the decrease-by-one-and-conquer algorithm to performing a topological sort.
+<ul>
+<li>What vertex do we need to find in each step of the algorithm?</li>
+<li>What do we do with that vertex after we find it?</li>
+<li>How do we obtain the resulting topological sort order?</li>
+<li>What’s the name of this algorithm?</li>
+</ul></li>
+<li>Some questions about this decrease-and-conquer algorithm:
+<ul>
+<li>Are we certain that every dag has a source?</li>
+<li>How would we find such a vertex in a graph represented as an adjacency list? What is the time efficiency of that step?</li>
+</ul></li>
+<li>How can we implement the decrease-and-conquer algorithm in time <span class="math inline">\(O(|V|+|E|)\)</span>?</li>
+<li>Work out problem 4.2.9 about <strong>strongly connected components</strong>.</li>
+</ul></li>
+</ul>
+</body>
+</html>
