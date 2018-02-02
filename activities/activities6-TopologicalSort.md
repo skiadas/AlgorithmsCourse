@@ -13,7 +13,7 @@ Speaker
 
 1. What is the time efficiency of the DFS approach to topological sort?
 \vfill
-2. Consider the dag 1b.
+2. Consider the dag in exercise 4.2.1b.
     a. Use the DFS-based topological sort algorithm to determine a topological sort for the vertices. Use the alphabetical order of the vertices for DFS.
     \vfill
     \vfill
