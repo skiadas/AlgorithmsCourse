@@ -79,9 +79,9 @@ Mon
     [Homework 2 Due](assignments/hwassignment2.md)
 
 Wed
-  ~ Decrease-by-constant-factor algorithms (4.4)
+  ~ [Decrease-by-constant-factor algorithms (4.4)](notes/decrease_by_constant_factor.md)
 
-    Variable size decrease algorithms (4.5)
+    [Activity Sheet 7](activities/activities7-DecreaseByConstantFactor.md)
 
 Fri
   ~ Review/catchup

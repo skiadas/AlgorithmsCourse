@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+<link rel="stylesheet" href="https://skiadas.github.io/css/course.css" type="text/css" />
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+<body>
+<h1 id="decrease-by-constant-factor-algorithms">Decrease-by-constant-factor algorithms</h1>
+<ul>
+<li>Read 4.4, pages 150-155
+<ul>
+<li>Study the <strong>BinarySearch</strong> algorithm in detail.
+<ul>
+<li>Explain the meaning of the variables <span class="math inline">\(l\)</span>, <span class="math inline">\(r\)</span> and <span class="math inline">\(m\)</span>.</li>
+<li>Explain the assignments to <span class="math inline">\(l\)</span> and <span class="math inline">\(r\)</span> inside the inner <code>if</code>.</li>
+<li>How would we modify the algorithm, if the array was sorted in the reverse order (from largest to smallest)?</li>
+</ul></li>
+<li>What is the best-case running time for the binary search algorithm? When does it occur?</li>
+<li>What is the worst-case running time for the binary search algorithm? Develop it by building a recurrence relation.</li>
+<li>Explain how the <strong>Russian Peasant Multiplication</strong> algorithm works.
+<ul>
+<li>Demonstrate its use if for <span class="math inline">\(n=45\)</span> and <span class="math inline">\(m=126\)</span>.</li>
+<li>The algorithm could start by possibly switching the roles of <span class="math inline">\(n\)</span> and <span class="math inline">\(m\)</span>. Does the choice of which of the two numbers is <span class="math inline">\(n\)</span> and which is <span class="math inline">\(m\)</span> affect the running time of the algorithm?</li>
+<li>Write pseudocode for the RPM algorithm using a recursive approach. What about a non-recursive solution?</li>
+</ul></li>
+<li>Read up on the Josephus problem.
+<ul>
+<li>Manually work out what would happen in the case where <span class="math inline">\(n=8\)</span> and <span class="math inline">\(n=9\)</span>.</li>
+<li>Make sure to understand the two recurrence relations that determine the relation between the person’s position before and after a round of eliminatoins.</li>
+<li>Exercise 4.4.15:
+<ul>
+<li>Directly compute <span class="math inline">\(J(n)\)</span> for each <span class="math inline">\(n\)</span> from <span class="math inline">\(1\)</span> to <span class="math inline">\(15\)</span> by following the game rules.</li>
+<li>Explain why <span class="math inline">\(J(n)=1\)</span> for every power of <span class="math inline">\(2\)</span>.</li>
+<li>Verify that the 1-bit cyclic shift of <span class="math inline">\(n\)</span> does result in <span class="math inline">\(J(n)\)</span> for those cases you just computed.</li>
+<li>Prove that the 1-bit cyclic shift operation obeys the same recurrence relations that <span class="math inline">\(J(n)\)</span> does, with the same start values when <span class="math inline">\(n=1,2\)</span>.</li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</body>
+</html>
