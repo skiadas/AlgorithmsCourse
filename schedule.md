@@ -89,7 +89,7 @@ Fri
 ## Week  6 (02/12-02/16)
 
 Mon
-  ~ Midterm 1 (Chapters 1-4)
+  ~ [Midterm 1 (Chapters 1-4)](notes/midterm1_study_guide.md)
 
 Wed
   ~  Divide-and-conquer algorithms (5.1)
