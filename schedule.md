@@ -79,12 +79,12 @@ Mon
     [Homework 2 Due](assignments/hwassignment2.md)
 
 Wed
+  ~ [Decrease-by-one algorithms: Topological Sort (4.2)](notes/decrease_by_one_topological.
+
+Fri
   ~ [Decrease-by-constant-factor algorithms (4.4)](notes/decrease_by_constant_factor.md)
 
     [Activity Sheet 7](activities/activities7-DecreaseByConstantFactor.md)
-
-Fri
-  ~ Review/catchup
 
 ## Week  6 (02/12-02/16)
 
@@ -92,9 +92,10 @@ Mon
   ~ [Midterm 1 (Chapters 1-4)](notes/midterm1_study_guide.md)
 
 Wed
-  ~  Divide-and-conquer algorithms (5.1)
+  ~ [Divide-and-conquer algorithms: Mergesort (5.1)](notes/divide_conquer.md)
 
-     Lab Assignment 3: ?
+    [Activity Sheet 8](activities/activities8-DivideAndConquer.md)
+
 Fri
   ~ Divide-and-conquer algorithms continued (5.2)
 

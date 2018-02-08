@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+<link rel="stylesheet" href="https://skiadas.github.io/css/course.css" type="text/css" />
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+<body>
+<h1 id="divide-and-conquer-algorithms-mergesort">Divide and Conquer Algorithms: Mergesort</h1>
+<ul>
+<li>Read 5.1
+<ul>
+<li>What is the main idea of the divide-and-conquer technique? How does it differ from the decrease-and-conquer approach?</li>
+<li>What is the general form of the recurrence relation for divide-and-conquer algorithms? What do the parameters <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span> and <span class="math inline">\(f(n)\)</span> represent?</li>
+<li>What does the <strong>master theorem</strong> say about a function <span class="math inline">\(T(n)\)</span> that satisfies the general recurrence relation?
+<ul>
+<li>The three cases of the master theorem are written in terms of comparing <span class="math inline">\(a\)</span> and <span class="math inline">\(b^d\)</span>. Write them instead in terms of comparing <span class="math inline">\(\log_b a\)</span> and <span class="math inline">\(d\)</span>.</li>
+</ul></li>
+<li>If a recursive algorithm needs to solve 3 subproblems of half the size, and it takes a constant time (<span class="math inline">\(\Theta(1)\)</span>) to put together the final answer, then what does the master theorem tell us about the runtime <span class="math inline">\(T(n)\)</span> of this algorithm?</li>
+<li>Describe how the MergeSort algorithm sorts an array.
+<ul>
+<li>Is MergeSort stable? Is it in-place?</li>
+<li>What does the Merge subprocess do? What do the indices <span class="math inline">\(i\)</span>, <span class="math inline">\(j\)</span>, <span class="math inline">\(k\)</span> represent?</li>
+<li>Do we need to use the index <span class="math inline">\(k\)</span> for the Merge process, or can we compute the needed value from <span class="math inline">\(i\)</span> and <span class="math inline">\(j\)</span>?</li>
+<li>Explain the meaning of the “copy” phase of the Merge algorithm.</li>
+<li>Use the MergeSort algorithm to sort the characters in the word EXAMPLE.</li>
+</ul></li>
+<li>Determine the runtime of MergeSort:
+<ul>
+<li>Start with a recurrence relation for the runtime <span class="math inline">\(C(n)\)</span> of MergeSort, in terms of the runtime <span class="math inline">\(C_{\textrm{merge}}(n)\)</span> of the Merge process.</li>
+<li>Determine the runtime of the (non-recursive) Merge process.</li>
+<li>Use the master theorem to determine the runtime <span class="math inline">\(C(n)\)</span> of MergeSort.</li>
+</ul></li>
+</ul></li>
+</ul>
+</body>
+</html>
