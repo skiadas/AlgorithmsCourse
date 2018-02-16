@@ -99,6 +99,7 @@ Wed
 Fri
   ~ Discussion of the Master Theorem
 
+    [Lab Assignment 3: Topological Sort](assignments/assignment3.md)
 
 ## Week  7 (02/19-02/23)
 
