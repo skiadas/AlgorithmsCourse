@@ -79,7 +79,7 @@ Mon
     [Homework 2 Due](assignments/hwassignment2.md)
 
 Wed
-  ~ [Decrease-by-one algorithms: Topological Sort (4.2)](notes/decrease_by_one_topological.
+  ~ [Decrease-by-one algorithms: Topological Sort (4.2)](notes/decrease_by_one_topological.md)
 
 Fri
   ~ [Decrease-by-constant-factor algorithms (4.4)](notes/decrease_by_constant_factor.md)
@@ -97,22 +97,19 @@ Wed
     [Activity Sheet 8](activities/activities8-DivideAndConquer.md)
 
 Fri
-  ~ Divide-and-conquer algorithms continued (5.2)
+  ~ Discussion of the Master Theorem
 
-    Other divide and conquer (5.3)
 
 ## Week  7 (02/19-02/23)
 
 Mon
-  ~ Instance simplification algorithms (6.1)
+  ~ [Divide-and-conquer algorithms: Quicksort (5.2)](notes/divide_conquer_quicksort.md)
 
 Wed
-  ~ Balanced Search Threes (6.3)
+  ~ Other divide and conquer (5.3)
 
 Fri
-  ~ Representation change: Heaps and Heapsort (6.4)
-
-    Lab Assignment 4: heaps (and/or balanced search trees)
+  ~ Instance simplification algorithms (6.1)
 
 ## Week  8 (02/26-03/02)
 
@@ -128,23 +125,25 @@ Fri
 ## Week  9 (03/05-03/09)
 
 Mon
-  ~ Problem reduction techniques (6.6)
+  ~ Balanced Search Threes (6.3)
 
 Wed
-  ~ Space-time tradeoffs: Hashing (7.3)
+  ~ Representation change: Heaps and Heapsort (6.4)
+
+    Lab Assignment 4: heaps (and/or balanced search trees)
 
 Fri
-  ~ Space-time tradeoffs: B-trees (7.3)
-
-    Lab Assignment 5: String Matching  (or Hashing?)
+  ~ Problem reduction techniques (6.6)
 
 ## Week  10 (03/12-03/16)
 
 Mon
-  ~ Review/Catchup
+  ~ Space-time tradeoffs: Hashing (7.3)
 
 Wed
-  ~ Dynamic Programming Algorithms, and Knapsack (8.1-8.2)
+  ~ Space-time tradeoffs: B-trees (7.3)
+
+    Lab Assignment 5: String Matching  (or Hashing?)
 
 Fri
   ~ Midterm 2 (Chapters 5-7)
@@ -152,7 +151,9 @@ Fri
 ## Week  11 (03/19-03/23)
 
 Mon
-  ~ Dynamic Programming: Optimal Binary Search Trees (8.3)
+  ~ Dynamic Programming Algorithms, and Knapsack (8.1-8.2)
+
+    Dynamic Programming: Optimal Binary Search Trees (8.3)
 
 Wed
   ~ Dynamic Programming: All Pairs Shortest Paths (8.4)
