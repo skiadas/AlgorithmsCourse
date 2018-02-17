@@ -106,6 +106,8 @@ Fri
 Mon
   ~ [Divide-and-conquer algorithms: Quicksort (5.2)](notes/divide_conquer_quicksort.md)
 
+    [Activity Sheet 9](activities/activities9-QuicksortAndPartition.md)
+
 Wed
   ~ Other divide and conquer (5.3)
 
