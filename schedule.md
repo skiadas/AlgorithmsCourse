@@ -106,13 +106,17 @@ Fri
 Mon
   ~ [Divide-and-conquer algorithms: Quicksort (5.2)](notes/divide_conquer_quicksort.md)
 
-    [Activity Sheet 9](activities/activities9-QuicksortAndPartition.md)
+    [Activity Sheet 9](activities/activities9-QuicksortAndPartitions.md)
 
 Wed
-  ~ Other divide and conquer (5.3)
+  ~ [Binary Tree Traversals (5.3)](notes/divide_conquer_traversals.md)
+
+    [Activity Sheet 10](activities/activities10-TreeTraversals.md)
 
 Fri
-  ~ Instance simplification algorithms (6.1)
+  ~ Multiplying large integers via divide-and-conquer (5.4)
+
+    Instance simplification algorithms (6.1)
 
 ## Week  8 (02/26-03/02)
 

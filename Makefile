@@ -6,7 +6,7 @@ HTMLFILES := $(MDFILES:./%.md=docs/%.html)
 PDFS := $(MDFILES:./%.md=docs/%.pdf)
 # TEXS := $(ASSIGNMENTS:./%.md=docs/%.tex)
 IMGFILES := $(shell find images -name \*.png)
-IMGFILES := $(IMGFILES:%=docs/notes/%)
+IMGFILES := $(IMGFILES:%=docs/%)
 
 $(HTMLFILES): docs/%.html: %.md $(TEMPLATE)
 	mkdir -p $(@D)
@@ -17,7 +17,8 @@ $(PDFS): docs/%.pdf: %.md $(TEXTEMPLATE)
 	pandoc -o $@ --template=$(TEXTEMPLATE) -t latex --listings --filter ./makeTex.hs $<
 
 
-$(IMGFILES): docs/notes/images/%.png: images/%.png
+$(IMGFILES): docs/images/%.png: images/%.png
+	mkdir -p $(@D)
 	cp $< $@
 
 email:
