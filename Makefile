@@ -1,5 +1,6 @@
 TEMPLATE = template.html
 TEXTEMPLATE = template.tex
+CURR:=$(shell pwd)
 MDFILES := $(shell find . -name \*.md | grep -v -e "/exams/")
 HTMLFILES := $(MDFILES:./%.md=docs/%.html)
 # ASSIGNMENTS := $(filter ./assignments/%.md,$(MDFILES))
@@ -10,11 +11,11 @@ IMGFILES := $(IMGFILES:%=docs/%)
 
 $(HTMLFILES): docs/%.html: %.md $(TEMPLATE)
 	mkdir -p $(@D)
-	pandoc -o $@ --template=$(TEMPLATE) --mathjax --smart --filter ./makeHtml.hs $<
+	/usr/local/bin/pandoc -o $@ --template=$(TEMPLATE) --mathjax --smart --filter ./makeHtml.hs $<
 
 $(PDFS): docs/%.pdf: %.md $(TEXTEMPLATE)
 	mkdir -p $(@D)
-	pandoc -o $@ --template=$(TEXTEMPLATE) -t latex --listings --filter ./makeTex.hs $<
+	cd $(@D); /usr/local/bin/pandoc -o $(CURR)/$@ --template=$(CURR)/$(TEXTEMPLATE) -t latex --listings --filter $(CURR)/makeTex.hs $(CURR)/$<; cd $(CURR)
 
 
 $(IMGFILES): docs/images/%.png: images/%.png

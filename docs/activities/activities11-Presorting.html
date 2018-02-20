@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+<link rel="stylesheet" href="https://skiadas.github.io/css/course.css" type="text/css" />
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+<body>
+<h1 id="activity-sheet-11">Activity Sheet 11</h1>
+<dl>
+<dt>Manager</dt>
+<dd>name:
+</dd>
+<dt>Recorder</dt>
+<dd>name:
+</dd>
+<dt>Speaker</dt>
+<dd>name:
+</dd>
+</dl>
+<h3 id="section-6.1">Section 6.1</h3>
+<ol style="list-style-type: decimal">
+<li>Suppose we have two integer arrays <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> of size <span class="math inline">\(n\)</span> and <span class="math inline">\(m\)</span> respectively.
+<ol style="list-style-type: lower-alpha">
+<li>Design a presorting-based algorithm to find out if the two sets have an integer in common. </li>
+<li>Compute the running time of the algorithm in terms of the problem size <span class="math inline">\(n + m\)</span> (or you can use as a measure of size the largest of the two). </li>
+</ol></li>
+<li>We will now use the previous algorithm to solve the following problem: Given an array <span class="math inline">\(A\)</span> of distinct numbers and a target number <span class="math inline">\(s\)</span>, determine if <span class="math inline">\(s\)</span> is the sum of two numbers from <span class="math inline">\(A\)</span>. The idea for the solution is that if <span class="math inline">\(x\)</span> is one of the numbers. then <span class="math inline">\(s-x\)</span> is the other.
+<ol style="list-style-type: lower-alpha">
+<li>Write an algorithm that solves the problem as follows: We first create an array <span class="math inline">\(B\)</span> that contains all the values <span class="math inline">\(s-x\)</span> for each value <span class="math inline">\(x\)</span> in <span class="math inline">\(A\)</span>. We then use problem 1 to find a number that belongs to both <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>. This number is the solution to our problem. </li>
+<li>Demonstrate the operation of this algorithm for the array with entries 23, 4, 16, 7, 12, 32, and target value <span class="math inline">\(s=39\)</span> as well as target value <span class="math inline">\(s=8\)</span> (You should notice an important detail regarding your algorithm for this second value). </li>
+<li>What is the running time for this algorithm? How does it compare to the brute-force approach of trying all possible pairs? </li>
+</ol></li>
+</ol>
+</body>
+</html>

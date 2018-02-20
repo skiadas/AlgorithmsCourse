@@ -114,9 +114,9 @@ Wed
     [Activity Sheet 10](activities/activities10-TreeTraversals.md)
 
 Fri
-  ~ Multiplying large integers via divide-and-conquer (5.4)
+  ~ [Instance simplification algorithms (6.1)](notes/instance_simplification.md)
 
-    Instance simplification algorithms (6.1)
+    [Activity Sheet 11](activities/activities11-Presorting.md)
 
 ## Week  8 (02/26-03/02)
 

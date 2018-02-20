@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+<link rel="stylesheet" href="https://skiadas.github.io/css/course.css" type="text/css" />
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+<body>
+<h1 id="instance-simplification-algorithms">Instance Simplification Algorithms</h1>
+<ul>
+<li>Read section 6.1 (pages 201-205)</li>
+<li>The general theme of chapter 6 is <strong>transform-and-conquer</strong> techniques. These algorithms are divided into three types. What are those three types? What kind of transformation do we perform in each type?</li>
+<li>What is <strong>presorting</strong>? How is it different from sorting?</li>
+<li>The brute force solution to looking for the maximum element in an array has running time <span class="math inline">\(O(n)\)</span>. How would a presort-based algorithm work? Would this problem benefit from a presorting approach?</li>
+<li>Describe the presort-based algorithm for <em>element uniqueness</em>. What is the running time of this algorithm?
+<ul>
+<li>What is the brute-force approach to this algorithm? How do the running times of the two approaches compare?</li>
+</ul></li>
+<li>Describe the presort-based algorithm for finding the element in a list with the highest multiplicity (mode).
+<ul>
+<li>What do the indices <code>i</code>, <code>modefrequency</code>, <code>runlength</code> and <code>runvalue</code> represent?</li>
+<li>What is the role of the <code>if runlength &gt; modefrequency</code> check?</li>
+<li>What does the assignment <code>i &lt;- i + runlength</code> do? Shouldn’t it be <code>i &lt;- i + 1</code>?</li>
+<li>What is the running time of this algorithm?</li>
+</ul></li>
+<li>Practice problems: 6.1.1, 6.1.5</li>
+<li>Challenge: 6.1.8, 6.1.9</li>
+</ul>
+</body>
+</html>
