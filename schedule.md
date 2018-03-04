@@ -137,7 +137,9 @@ Mon
     [Activity Sheet 12](activities/activities12-balanced_trees.md)
 
 Wed
-  ~ Representation change: Heaps and Heapsort (6.4)
+  ~ [Representation change: Heaps and Heapsort (6.4)](notes/heaps.md)
+
+    [Activity Sheet 13](activities/activities13-heaps.md)
 
     Lab Assignment 4: heaps (and/or balanced search trees)
 

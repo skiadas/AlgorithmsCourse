@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+<link rel="stylesheet" href="https://skiadas.github.io/css/course.css" type="text/css" />
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+<body>
+<h1 id="heaps">Heaps</h1>
+<ul>
+<li>Read section 6.4 (pages 226-232)</li>
+<li>What are the three main operations of a <strong>priority queue</strong>?</li>
+<li>What are the two properties that a <strong>heap</strong> has? How do heaps differ from binary search trees?
+<ul>
+<li>What are the differences between “max-heaps” and “min-heaps”?</li>
+</ul></li>
+<li>We consider heaps as arrays with values starting at index 1. How do the indices in the array correspond to the tree structure of the heap?
+<ul>
+<li>How can we write the <em>shape property</em> in terms of the array entries?</li>
+</ul></li>
+<li>Study the <strong>bottom-up heap construction</strong> algorithm and figure 6.11.
+<ul>
+<li>Why is it important that the for loop move in the reverse direction?</li>
+<li>Why does the for loop start from the middle of the array?</li>
+<li>Each step of the for loop is often also called a “percolate down” operation. Explain why that is.</li>
+<li>What is the role of the while loop? why is there not a single step for each i?</li>
+<li>Roughly how many comparisons does the bottom-up construction require?</li>
+</ul></li>
+<li>How does the <strong>top-down heap construction</strong> algorithm work?
+<ul>
+<li>The key step in this algorithm is a “bubble up” operation. Explain why that is.</li>
+<li>Make sure you understand how this algorithm differs from the bottom-up approach.</li>
+</ul></li>
+<li>How do we <strong>delete</strong> a key (in particular the maximum key) from the list?</li>
+<li>How does <strong>heapsort</strong> work? What is its time efficiency?
+<ul>
+<li>What type of transform-and-conquer does heapsort represent?</li>
+</ul></li>
+<li>Implement the heapsort algorithm to sort the letters of the word EXAMPLE.</li>
+<li>Practice problems: 6.4.1, 6.4.2, 6.4.3, 6.4.5, 6.4.6</li>
+</ul>
+</body>
+</html>
