@@ -132,7 +132,9 @@ Fri
 ## Week  9 (03/05-03/09)
 
 Mon
-  ~ Balanced Search Threes (6.3)
+  ~ [Balanced Search Trees (6.3)](notes/balanced_search_trees.md)
+
+    [Activity Sheet 12](activities/activities12-balanced_trees.md)
 
 Wed
   ~ Representation change: Heaps and Heapsort (6.4)
@@ -141,6 +143,8 @@ Wed
 
 Fri
   ~ Problem reduction techniques (6.6)
+
+    [Homework 3 Due](assignments/hwassignment3.md)
 
 ## Week  10 (03/12-03/16)
 

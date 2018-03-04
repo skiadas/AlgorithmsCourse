@@ -11,11 +11,11 @@ IMGFILES := $(IMGFILES:%=docs/%)
 
 $(HTMLFILES): docs/%.html: %.md $(TEMPLATE)
 	mkdir -p $(@D)
-	/usr/local/bin/pandoc -o $@ --template=$(TEMPLATE) --mathjax --smart --filter ./makeHtml.hs $<
+	pandoc -o $@ --template=$(TEMPLATE) --mathjax --smart --filter ./makeHtml.hs $<
 
 $(PDFS): docs/%.pdf: %.md $(TEXTEMPLATE)
 	mkdir -p $(@D)
-	cd $(@D); /usr/local/bin/pandoc -o $(CURR)/$@ --template=$(CURR)/$(TEXTEMPLATE) -t latex --listings --filter $(CURR)/makeTex.hs $(CURR)/$<; cd $(CURR)
+	cd $(@D); pandoc -o $(CURR)/$@ --template=$(CURR)/$(TEXTEMPLATE) -t latex --listings --filter $(CURR)/makeTex.hs $(CURR)/$<; cd $(CURR)
 
 
 $(IMGFILES): docs/images/%.png: images/%.png
