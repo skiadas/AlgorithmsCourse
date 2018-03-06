@@ -134,45 +134,45 @@ Fri
 Mon
   ~ [Balanced Search Trees (6.3)](notes/balanced_search_trees.md)
 
+Wed
+  ~ Balanced Search Trees (6.3)](notes/balanced_search_trees.md)
+
     [Activity Sheet 12](activities/activities12-balanced_trees.md)
 
-Wed
+Fri
   ~ [Representation change: Heaps and Heapsort (6.4)](notes/heaps.md)
 
     [Activity Sheet 13](activities/activities13-heaps.md)
 
-    Lab Assignment 4: heaps (and/or balanced search trees)
-
-Fri
-  ~ Problem reduction techniques (6.6)
-
     [Homework 3 Due](assignments/hwassignment3.md)
+
+    Lab Assignment 4: heaps (and/or balanced search trees)
 
 ## Week  10 (03/12-03/16)
 
 Mon
-  ~ Space-time tradeoffs: Hashing (7.3)
+  ~ [Space-time tradeoffs: Hashing (7.3)](notes/hashing.md)
 
 Wed
   ~ Space-time tradeoffs: B-trees (7.3)
 
-    Lab Assignment 5: String Matching  (or Hashing?)
-
 Fri
-  ~ Midterm 2 (Chapters 5-7)
+  ~ Dynamic Programming Algorithms, and Knapsack (8.1-8.2)
+
+    Lab Assignment 5: String Matching  (or Hashing?)
 
 ## Week  11 (03/19-03/23)
 
 Mon
-  ~ Dynamic Programming Algorithms, and Knapsack (8.1-8.2)
+  ~ Dynamic Programming: Optimal Binary Search Trees (8.3)
 
-    Dynamic Programming: Optimal Binary Search Trees (8.3)
+    Dynamic Programming: All Pairs Shortest Paths (8.4)
 
 Wed
-  ~ Dynamic Programming: All Pairs Shortest Paths (8.4)
+  ~ Greedy Algorithms: Prim's (9.1)
 
 Fri
-  ~ Greedy Algorithms: Prim's (9.1)
+  ~ Midterm 2 (Chapters 5-7)
 
 ## Week  12 (03/26-03/30)
 

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+<link rel="stylesheet" href="https://skiadas.github.io/css/course.css" type="text/css" />
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+<body>
+<h1 id="hashing">Hashing</h1>
+<ul>
+<li>Read section 7.3 (pages 269-275)</li>
+<li>What abstract data type are <strong>hash tables</strong> used for? What operations does that type support?</li>
+<li>What do we call the <strong>hash function</strong>? What is the <strong>hash address</strong> of a key?</li>
+<li>If our keys are characters, and we want to store them in a hash table of size <span class="math inline">\(m=10\)</span>, based on a hash function that counts the letters from 0 and then computes that number modulo <span class="math inline">\(m\)</span>. What hash addresses would the letters in EXAMPLE correspond to?</li>
+<li>What are some important properties of a <em>good</em> hash function?</li>
+<li>What do we call a <strong>collision</strong> in a hash table?</li>
+<li>How does the <strong>open hashing</strong>, or <strong>separate chaining</strong> mechanism store keys?
+<ul>
+<li>How do we perform search/insertion/deletion in the open hashing case?</li>
+<li>What factors influence the length of the resulting linked lists?</li>
+<li>What number is the <strong>load factor</strong> of a hash table?</li>
+<li>If we want to store 100 keys in a hash table of size 20, what is the load factor?</li>
+<li>In a hash table with load factor <span class="math inline">\(\alpha\)</span>, how many elements need to be inspected on average, for a successful search? What about unsuccessful searches?</li>
+<li>What consequence does having a large load factor (much less than 1) have?</li>
+<li>What consequence does having a small load factor (much more than 1) have?</li>
+</ul></li>
+<li>In what way is the hash table a space-time trade-off?</li>
+<li>How does the <strong>closed hashing</strong>, or <strong>open addressing</strong> mechanism store keys?
+<ul>
+<li>What load factors can we have in this scheme?</li>
+<li>How does <strong>linear probing</strong> resolve resolutions?</li>
+<li>How does search work in this scheme? What about deletion?</li>
+<li>What are <strong>clusters</strong> and why do they cause problems for closed hashing?</li>
+<li>What is the average access time for closed hashing in terms of the load factor <span class="math inline">\(\alpha\)</span>, for both successful and unsuccessful searches?</li>
+<li>What values of the load factor should we aim for in closed hashing?</li>
+</ul></li>
+<li>Practice problems: 7.3.1, 7.3.2, 7.3.3, 7.3.5, 7.3.7</li>
+</ul>
+</body>
+</html>
