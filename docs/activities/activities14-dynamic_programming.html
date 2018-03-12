@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+<link rel="stylesheet" href="https://skiadas.github.io/css/course.css" type="text/css" />
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+<body>
+<h1 id="activity-sheet-14">Activity Sheet 14</h1>
+<dl>
+<dt>Manager</dt>
+<dd>name:
+</dd>
+<dt>Recorder</dt>
+<dd>name:
+</dd>
+<dt>Speaker</dt>
+<dd>name:
+</dd>
+</dl>
+<h3 id="section-8.1">Section 8.1</h3>
+<ol style="list-style-type: decimal">
+<li>We can approach the change-making problem by instead doing dynamic programming in two dimensions, <code>j</code> to represent that we use only the first <code>j</code> denominations <code>D[1]</code> through <code>D[j]</code>, and <code>n</code> to represent the target value. So <code>F(j, n)</code> is the number of coins we need to use, being allowed to only use the first j denominations. (Notice that indexing in D starts at 1)
+<ol style="list-style-type: lower-alpha">
+<li>Assuming we have the denominations <code>D = [1, 4, 6]</code>, determine <code>F(1, 5)</code> as well as <code>F(2,5)</code>. </li>
+<li>What should <code>F(0, 0)</code>, <code>F(2, 0)</code>, <code>F(0, 1)</code>, <code>F(2, -2)</code> be? Your answers to this don’t really depend on the particular denominators used, they apply broadly. </li>
+<li>We can build a recurrence relation for <code>F(j, n)</code> as follows: In our effort to make change for <code>n</code> using the <code>j</code> first denominations, we have two options: We can either use the <code>D[j]</code> denomination, and then we need to reach the target of <code>n-d_j</code> using the first <code>j</code> denominations still, or we can not use the <code>D[j]</code> denomination at all, meaning that we need to reach the target <code>n</code> using the first <code>j-1</code> denominations. Use this statement to write a recurrence relation for <code>F(j, n)</code>. </li>
+<li>Write an algorithm that uses this recurrence relation to fill the 2-dimensional array <code>F[0..m, 0..n]</code>. Make sure to either avoid or handle carefully the case where you look up a value <code>F[j, i]</code> where <code>i</code> is a negative number.</li>
+</ol></li>
+</ol>
+</body>
+</html>

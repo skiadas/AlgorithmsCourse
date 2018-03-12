@@ -146,7 +146,7 @@ Fri
 
     [Homework 3 Due](assignments/hwassignment3.md)
 
-    Lab Assignment 4: heaps (and/or balanced search trees)
+    Lab Assignment 4: Sorting algorithms
 
 ## Week  10 (03/12-03/16)
 
@@ -154,19 +154,19 @@ Mon
   ~ [Space-time tradeoffs: Hashing (7.3)](notes/hashing.md)
 
 Wed
-  ~ Space-time tradeoffs: B-trees (7.3)
+  ~ [Dynamic Programming Algorithms (8.1)](notes/dynamic_programming.md)
+
+    [Activity Sheet 14](activities/activities14-dynamic_programming.md)
 
 Fri
-  ~ Dynamic Programming Algorithms, and Knapsack (8.1-8.2)
+  ~ Dynamic Programming: Knapsack, Optimal Binary Search Trees (8.2, 8.3)
 
     Lab Assignment 5: String Matching  (or Hashing?)
 
 ## Week  11 (03/19-03/23)
 
 Mon
-  ~ Dynamic Programming: Optimal Binary Search Trees (8.3)
-
-    Dynamic Programming: All Pairs Shortest Paths (8.4)
+  ~ Dynamic Programming: All Pairs Shortest Paths (8.4)
 
 Wed
   ~ Greedy Algorithms: Prim's (9.1)
