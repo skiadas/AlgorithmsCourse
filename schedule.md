@@ -146,8 +146,6 @@ Fri
 
     [Homework 3 Due](assignments/hwassignment3.md)
 
-    Lab Assignment 4: Sorting algorithms
-
 ## Week  10 (03/12-03/16)
 
 Mon
@@ -159,9 +157,9 @@ Wed
     [Activity Sheet 14](activities/activities14-dynamic_programming.md)
 
 Fri
-  ~ Dynamic Programming: Knapsack, Optimal Binary Search Trees (8.2, 8.3)
+  ~ [Dynamic Programming: Knapsack, Optimal Binary Search Trees (8.2, 8.3)](notes/dynamic_knapsack.md)
 
-    Lab Assignment 5: String Matching  (or Hashing?)
+    [Lab Assignment 4](assignments/assignment4.md)
 
 ## Week  11 (03/19-03/23)
 
@@ -179,14 +177,17 @@ Fri
 Mon
   ~ Greedy Algorithms: Kruskal's, Union-Find (9.2)
 
-Wed
-  ~ Greedy Algorithms: Dijkstra (9.3)
+    Lab Assignment 5: String Matching  (or Hashing?)
 
     Lab Assignment 6: Greedy Graph Algorithms
 
+Wed
+  ~ Greedy Algorithms: Dijkstra (9.3)
+
+    [Lab Assignment 4 Due](assignments/assignment4.md)
+
 Fri
   ~ Iterative Improvement: Maximum-Flow Problem (10.2)
-
 
 ## Week  13 (04/01-04/06)
 

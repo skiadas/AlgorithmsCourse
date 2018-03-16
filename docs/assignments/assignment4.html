@@ -26,43 +26,66 @@
 </ol>
 <h2 id="the-assignment">The assignment</h2>
 <h3 id="introductory-stuff">Introductory stuff</h3>
-<p>TODO</p>
-<p>The main file you will work on in this assignment is <code>TopologicalSort.java</code>, inside <code>src/main/java/utils</code>.</p>
+<p>In this assignment there are two files you will be working on: <code>Sort.java</code>, inside <code>src/main/java/utils</code> is the main file that you will have to edit. You may also need to look into the <code>CompArray.java</code> file.</p>
 <p>As in the previous assignment, you will find numerous <code>TODO</code> comments throughout the file. They mark the locations where you need to add something to the implementations. Some times it will be one or two lines, some times it may be more. If you use Eclipse, you can see blue rectangles on the right side of the code indicating the location of all TODOs, and you can click on them to go there. You can keep track of your progress that way, so make sure to remove the TODO from the methods you have already implemented.</p>
-<p>A standard printout of a run of the various methods can be obtained by running the main method of the TopologicalSort class (so running the TopologicalSort class as an application). To do that, you will need to first build using the corresponding gradle task, and then run the <code>runTopological</code> gradle task from the <code>run</code> group of tasks (you may need to refresh the gradle project and possibly close and reopen the gradle tasks to make it appear).</p>
+<p>A standard printout of a run of the various methods can be obtained by running the main method of the Sort class (so running the Sort class as an application). To do that, you will need to first build using the corresponding gradle task, and then run the <code>runSort</code> gradle task from the <code>run</code> group of tasks (you may need to refresh the gradle project and possibly close and reopen the gradle tasks to make it appear).</p>
 <p>Alternatively, you can go to your terminal (or Eclipse’s console), go to the main project folder and run:</p>
-<pre><code>java -cp build/libs/algorithms-assignments.jar utils.TopologicalSort</code></pre>
+<pre><code>java -cp build/libs/algorithms-assignments.jar utils.Sort</code></pre>
 <p>If you like to write more tests, you can create test files under <code>/src/test/java</code>. Ask for help if you are not sure how to start those tests. You can use the <code>:test</code> Gradle task to run the tests.</p>
 <p>You should make a new <em>commit</em> in GitKraken after completing each self-contained part, typically after each method you complete. Do not try to commit everything at once.</p>
 <p>When you are done with the assignment, in order to “submit” it, simply <strong>push</strong> your commits via GitKraken. These will now be posted on your account in GitLab and I will be able to follow them from there.</p>
 <h3 id="the-structure-of-the-files">The structure of the files</h3>
-<p>There are one file of concern in this assignment. <code>TopologicalSort.java</code>.</p>
-<p>The <code>TopologicalSort</code> class contains a <code>SimpleGraph</code> instance along with its order. These are set via the constructor. The only other part is a <code>run</code> method, which is meant to execute a source-removal topological sort and return a <code>List</code> of the vertices in that order.</p>
-<p>Here is the main workflow of the <code>run</code> method:</p>
-<ol style="list-style-type: decimal">
-<li>We keep a <code>resultList</code> that will contain the list of vertices in sorted order. This is what we return at the end of our method.</li>
-<li>A <code>processQueue</code> queue contains vertices that are source vertices (no incoming edges). These vertices are the next to go in the result list.</li>
-<li>An <code>edgeCount</code> array keeps track of the number of incoming edges for each vertex. Vertices with count 0 are source vertices.</li>
-<li>We effectively process the vertices in the processQueue. For each such source vertex, we “remove” it from the graph. We don’t actually remove the vertex, we simply adjust the <code>edgeCount</code> array to account for the fact that the edges outgoing from this vertex are removed. So if the vertex 3 is the next one to be removed, and it has edges going to vertices 5 and 6, then we adjust the <code>edgeCount</code> values of 5 and 6 to be one less.</li>
-<li>When a vertex reaches an <code>edgeCount</code> of 0, it is a new source vertex of the smaller graph and we therefore add it to <code>processQueue</code>.</li>
-<li>We repeat this process until <code>processQueue</code> is empty</li>
-</ol>
+<p>There are two file of concern in this assignment. <code>Sort.java</code> and <code>CompArray.java</code>.</p>
+<p><code>CompArray.java</code> contains a wrapper around arrays. You will implement sorting algorithms on arrays but you are specifically asked to use the <code>CompArray</code> wrapper in the process. This is designed so that it counts how many comparisons and how many writes your algorithms do and prints those out.</p>
+<p>Here are the main elements of the <code>CompArray</code> class, that you have at your disposal:</p>
+<ul>
+<li>The elements of the array are actually instances of the <code>CompArray.CompElement</code> class. You should take a look at its implementation within <code>CompArray</code>, around line 39.
+<ul>
+<li>It has a constructor <code>CompElement()</code> that generates a random element within a provided range, and a <code>CompElement(key)</code> constructor that generates a element with a specific value <code>key</code>. These are values are integers.</li>
+<li><code>CompElement</code> objects can be compared via a series of provided methods with straightforward names. For example, instead of doing <code>a &lt; b</code> you would be doing <code>a.lessThan(b)</code>. Each time you do a comparison is counted.</li>
+</ul></li>
+<li>A new empty <code>CompArray</code> of a given size can be via the <code>CompArray(size)</code> constructor.</li>
+<li>A new array populated with random entries can be constructed via the <code>makeRandom(size, bound)</code> static function. See the <code>main</code> function in the <code>Sort</code> class for an example.</li>
+<li>You can interact with a <code>CompArray</code> instance <code>array</code> via a set of public instance methods:
+<ul>
+<li><code>array.get(i)</code> is the analog of doing <code>A[i]</code> for a normal array, and it will throw an error if you are out of bounds.</li>
+<li><code>array.put(i, v)</code> is the analog of doing <code>A[i] = v</code> for a normal array, and will similarly throw an error if you are out of bounds.</li>
+<li>As an example of this, if you wanted to do the operation <code>A[k] = A[i]</code>, then you would instead do something more like <code>array.put(k, array.get(i))</code>.</li>
+<li><code>array.swap(i, j)</code> will swap the values in places <code>i</code>, <code>j</code> in the array.</li>
+<li><code>array.size()</code> returns the array length.</li>
+<li><code>array.getNumComparisons()</code> returns the number of times that array elements have been compared.</li>
+<li><code>array.getNumWrites()</code> returns the number of times that array elements have been written, either via a call to <code>put</code> or via a call to <code>swap</code> (which does two writes).</li>
+<li>Before starting to test a sort method, you should reset these counts by calling <code>CompArray.resetCounts()</code>. The sample test in the <code>main</code> method of <code>Sort</code> does this.</li>
+<li>You can print the whole array by turning it into a string via its <code>toString</code> method. This also happens automatically if you use the array in a <code>print</code> call.</li>
+</ul></li>
+</ul>
+<p>The <code>Sort</code> class is the class where you will implement a number of different sort methods.</p>
+<p>All methods are expected to change the array in-place, rather than return anything.</p>
+<p>The method <code>insertionSort</code> is implemented for you as an example. You should study it and compare it to the implementation in the book, to understand how the system works.</p>
 <h3 id="the-actual-tasks">The actual tasks</h3>
-<p>Now on to the tasks you need to complete. Make sure you have read the previous section for an understanding of the structure of the files.</p>
-<p>All your work is in the body of the <code>run</code> method.</p>
+<p>Now on to the tasks you need to complete. Make sure you have read the previous section for an understanding of the structure of the classes you will be working with.</p>
+<p>You will be implementing five sort methods. For each method the skeleton is provided for you, and you are asked to fill in the details.</p>
 <ol style="list-style-type: decimal">
-<li>You first need to initialize the <code>resultList</code>, <code>processQueue</code> and <code>edgeCount</code> local variables. The list and queue start empty, and the edgeCount array will start with values 0, which Java does for us when we call the array constructor.</li>
-<li>You then need to start the <code>edgeCount</code> array with the correct values. <code>edgeCount[j]</code> must end up containing the number of edges that are incoming to j. You have to simply go through the vertices of the graph, and for each vertex go through the outgoing edges. For each such edge, you must increment the <code>edgeCount</code> of the target vertex.</li>
-<li>Next we need to search for any available source vertices, so we can start the process. These vertices are those with <code>edgeCount</code> 0. You simply go through the <code>edgeCount</code> array, and any vertices that have a count of 0 you add to the <code>processQueue</code>.</li>
-<li>If no vertices were found that way, this means that graph is not a directed acyclic graph and therefore cannot be topologically-sorted. You can simply throw an error.</li>
-<li>Next we have a main loop that goes on as long as the <code>processQueue</code> is not empty (you have to write the <code>while</code> loop). It consists of the following parts:
-<ol style="list-style-type: lower-alpha">
-<li>First we remove the next available vertex from the queue (the while loop body should only execute if the processQueue is not empty.</li>
-<li>This vertex is the next source vertex, so we need to add it to our <code>resultList</code>.</li>
-<li>This vertex is to be removed from the graph. We therefore go through the outgoing edges from this vertex, and decrement the corresponding <code>edgeCount</code> entries.</li>
-<li>If one of those entries was already at 0 when we tried to decrement it, we have a logic error, as this should only happen if we miscounted the edges earlier.</li>
-<li>If the entry became 0 after we decremented it, then we just discovered a new source vertex, and we add it to the queue.</li>
-</ol></li>
+<li>The first method is <code>selectionSort</code>. It should implement the selection sort algorithm on page 99. In particular, your implementation should be doing a suitably small number of writes/swaps.</li>
+<li>The next method you should implement is <code>bubbleSort</code>. This of course implements the bubble sort algorithm on page 100.</li>
+<li>Next we have <code>mergeSort</code>, which of course implements the algorithm on page 172. The skeleton for <code>mergeSort</code> is provided for you.
+<ul>
+<li>In the <code>mergeSort</code> method itself, the only two things you need to do is implement the two <code>for</code> loops that fill in the values in the arrays <code>array1</code> and <code>array2</code>. These steps correspond to the two “copy” operations in the algorithm.</li>
+<li>The method then recursively calls itself on the two arrays, then calls the <code>merge</code> method. You do not need to do anything with that code.</li>
+<li>You DO need to fill in the parts of the <code>merge</code> method, which follows the <code>mergeSort</code> method. This implements the algorithm at the bottom of page 172. You will need to implement the body of the while loop as well as the two copy steps in that algorithm.</li>
+</ul></li>
+<li>Next we have <code>quickSort</code>, which implements the QuickSort method with Hoare partitioning and without a special pivot mechanism.
+<ul>
+<li>The <code>quickSort</code> method itself calls the <code>qSort</code> helper with the array bounds as initial endpoints. You don’t need to do anything there.</li>
+<li>The <code>qSort</code> helper method is meant to sort the array between the two provided locations <code>l</code> and <code>r</code>, and it corresponds to the algorithm on page 176. This is also written for you, and you do not need to do anything.</li>
+<li>You do need to implement the <code>partition</code> method that follows, which corresponds to the algorithm on page 178.</li>
+<li>There is a possible extra-credit component to this problem. The default implementation as described in page 178 will occasionally throw an error, as it is possible that the index <code>i</code> may go out of bounds. This will happen on some of your runs, but not all. The extra-credit component is for suitably fixing your implementation of <code>partition</code> so that does not have this problem.</li>
+</ul></li>
+<li>Lastly, we have <code>heapSort</code>. The <code>heapSort</code> method itself is done for you, and it takes care of the fact that arrays for <code>heapSort</code> need to start at index 1.
+<ul>
+<li><code>heapSort</code> uses the <code>heapBottomUp</code> method of page 229 to heapify the array, and then does successive maximum element deletions to get the sorted array. This is done for you.</li>
+<li>What you have to implement is the <code>heapPercolateDown</code> method, which corresponds to the contents of the for-loop in algorithm 229. This method is given an root index <code>i</code>, and it is supposed to push the element at that index <code>i</code> down to the correct spot.</li>
+</ul></li>
 </ol>
 <p>And we’re done!</p>
 </body>
