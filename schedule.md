@@ -157,27 +157,25 @@ Wed
     [Activity Sheet 14](activities/activities14-dynamic_programming.md)
 
 Fri
-  ~ [Dynamic Programming: Knapsack, Optimal Binary Search Trees (8.2, 8.3)](notes/dynamic_knapsack.md)
+  ~ Dynamic Programming, continued
 
     [Lab Assignment 4](assignments/assignment4.md)
 
 ## Week  11 (03/19-03/23)
 
 Mon
-  ~ Dynamic Programming: All Pairs Shortest Paths (8.4)
+  ~ [Dynamic Programming: Knapsack, Optimal Binary Search Trees (8.2, 8.3)](notes/dynamic_knapsack.md)
 
 Wed
   ~ Greedy Algorithms: Prim's (9.1)
 
 Fri
-  ~ Midterm 2 (Chapters 5-7)
+  ~ [Midterm 2 (Chapters 5-7)](notes/midterm2_study_guide.md)
 
 ## Week  12 (03/26-03/30)
 
 Mon
   ~ Greedy Algorithms: Kruskal's, Union-Find (9.2)
-
-    Lab Assignment 5: String Matching  (or Hashing?)
 
     Lab Assignment 6: Greedy Graph Algorithms
 

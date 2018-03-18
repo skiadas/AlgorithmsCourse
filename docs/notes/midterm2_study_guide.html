@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+<link rel="stylesheet" href="https://skiadas.github.io/css/course.css" type="text/css" />
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+<body>
+<h1 id="midterm-1-study-guide">Midterm 1 Study Guide</h1>
+<p>This midterm covers chapters 5 through 7. Here is a list of the main ideas:</p>
+<ol style="list-style-type: decimal">
+<li>What is the general approach in the <strong>divide-and-conquer</strong> technique? How does it differ from the <em>decrease-and-conquer</em> technique?</li>
+<li>What does the <strong>master theorem</strong> say about the solution to the recurrence relation <span class="math inline">\(T(n) = a T(n/b) + f(n)\)</span>? How does this relate to the divide-and-conquer technique? What do the parameters <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span>, <span class="math inline">\(f(n)\)</span> represent in the divide-and-conquer context?</li>
+<li>Be able to use the master theorem (e.g. exercise 5.1.5)</li>
+<li>Describe the <strong>mergesort</strong> algorithm, and outline the general algorithm for it.
+<ul>
+<li>In particular, be able to write down the both the <code>Mergesort</code> and the <code>Merge</code> algorithms of page 172.</li>
+<li>Use the master theorem to determine the worst case time efficiency of mergesort.</li>
+<li>Is mergesort a stable algorithm?</li>
+</ul></li>
+<li>Describe the overall plan for the <strong>quicksort</strong> algorithm.
+<ul>
+<li>Describe what a <strong>partition</strong> is.</li>
+<li>Describe the two partition algorithms we saw, Lomuto (page 159) and Hoare (page 178). You do NOT need to be able to write the exactly, but you do need to be able to describe how they achieve their partition.</li>
+<li>Explain how the time efficiency of the quicksort algorithm depends on a good choice of a pivot, then describe some possible approaches to pivot selection.</li>
+</ul></li>
+<li>Explain what <em>internal</em> and <em>external</em> nodes are in a binary tree and why the number of external nodes is always one more than the number of internal nodes.</li>
+<li>Be able to write down common divide-and-conquer algorithms for binary trees such as determining the tree height, the number of external nodes, and whether a tree is in fact a binary <em>search</em> tree.</li>
+<li>Be able to name, describe and use the three traversal approaches to binary trees.</li>
+<li>What are the three different forms that <strong>transform-and-conquer</strong> algorithms take? Describe each form.</li>
+<li>Show instances where <strong>presorting</strong> an array can lead to more efficient algorithms. In particular, be able to explain how presorting can help with finding if there are any duplicate elements in the array and also to find what the smallest absolute difference between array elements is. Determine the time efficiency of solutions to these problems using presorting and also using a more brute-force approach.</li>
+<li><strong>AVL Trees</strong>:
+<ul>
+<li>What is the definition of an AVL Tree? What is the <strong>balance factor</strong> of a node?</li>
+<li>Describe graphically the four different “rotations” that are used in the implementation of AVL trees.</li>
+<li>Be able to carry out these transformations to bring a tree into the AVL form.</li>
+</ul></li>
+<li><strong>2-3 Trees</strong>: Describe the two kinds of nodes that 2-3 trees have, what further property 2-3 trees have, and how to search in a 2-3 tree.</li>
+<li><strong>Heaps</strong>:
+<ul>
+<li>A heap is a binary search tree with a very specific structure, satisfying two key conditions. Describe that structure.</li>
+<li>How can we think of a heap instead via an array? How do the indices in the array correspond to the tree structure?</li>
+<li>What are <strong>priority queues</strong>? Why is a heap a particularly good way to implement a priority queue?</li>
+<li>Describe the heap-bottom-up construction. What is its time efficiency?</li>
+<li>Describe how maximum key deletion in a heap occurs.</li>
+<li>Show how the heapsort algorithm works.</li>
+</ul></li>
+<li><strong>Hashing</strong>:
+<ul>
+<li>Describe the main ideas behind hashing: <em>hash table</em>, <em>hash function</em>, <em>hash address</em>, <em>load factor</em>, <em>collisions</em>.</li>
+<li>Describe some possible hash functions for strings and what their drawbacks are.</li>
+<li>Describe how <em>open hashing</em> and <em>closed hashing</em> work and how they differ from each other. Describe the <em>linear probing</em> approach to closed hashing.</li>
+</ul></li>
+</ol>
+</body>
+</html>
