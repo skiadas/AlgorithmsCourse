@@ -167,7 +167,7 @@ Mon
   ~ [Dynamic Programming: Knapsack, Optimal Binary Search Trees (8.2, 8.3)](notes/dynamic_knapsack.md)
 
 Wed
-  ~ Greedy Algorithms: Prim's (9.1)
+  ~ [Greedy Algorithms: Prim's Algorithm (9.1)](notes/greedy_prim.md)
 
 Fri
   ~ [Midterm 2 (Chapters 5-7)](notes/midterm2_study_guide.md)

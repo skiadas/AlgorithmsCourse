@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+<link rel="stylesheet" href="https://skiadas.github.io/css/course.css" type="text/css" />
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+<body>
+<h1 id="greedy-algorithms-prims-algorithm">Greedy Algorithms: Prim’s Algorithm</h1>
+<ul>
+<li>Read section 9.1 (pages 315-322)</li>
+<li>In order for an algorithm to be characterized as <strong>greedy</strong>, there are three important properties regarding the choice made by the algorithm at each point. What are those properties?</li>
+<li>Does a greedy algorithm always provide an optimal solution to the problem?</li>
+<li>What would a greedy algorithm to the coin-making problem be? Show by an example that it is not the optimal solution.</li>
+<li>There are three techniques that are typically used in order to prove that a greedy algorithm does in fact produce the optimal solution. Describe an example of each:
+<ul>
+<li>We can use induction to prove that the partially constructed solution at any step can in fact be extended to an optimal solution.</li>
+<li>We can show that at each step the algorithm does at least as well as any other algorithm.</li>
+<li>We can show that the final result obtained by the greedy algorithm is in fact the optimal result, based purely on that result.</li>
+</ul></li>
+<li>What is a <strong>minimum spanning tree</strong> for an undirected connected graph?</li>
+<li>How does <strong>Prim’s Algorithm</strong> construct a minimum spanning tree?</li>
+<li>Demonstrate a run of Prim’s algorithm on the graph in page 9.3, but starting from the vertex <span class="math inline">\(d\)</span> instead.</li>
+<li>Write pseudocode for Prim’s algorithm.</li>
+<li>A key part of Prim’s algorithm is the ability to select a minimum-weight edge from a set of eligible edges. The paragraph following the algorithm describes the main way to approach this selection process. Describe this way in more detail:
+<ul>
+<li>Maintain a priority queue structure with all the vertices that are yet to be connected to the spanning tree, along with the weights of the edges that connect them to the tree’s vertices.</li>
+<li>When a new vertex is connected to the tree, remove it from this structure and adjust the weights of any edges that are adjacent to it.</li>
+</ul></li>
+<li>Show how a min-heap can be used to maintain this structure. How can we adjust the weight of an entry in the heap while maintaining the heap property?
+<ul>
+<li>If the weight goes up, percolate value down (min-heap).</li>
+<li>If the weight goes down, bubble value up.</li>
+</ul></li>
+<li>What is the time efficiency of Prim’s algorithm?</li>
+<li>Prove that Prim’s algorithm produces a minimum spanning tree by proving that the edge added at each level must be part of a minimum spanning tree, as follows:
+<ul>
+<li>We can assume that the tree <span class="math inline">\(T_{i-1}\)</span> built after <span class="math inline">\(i-1\)</span> steps is part of a minimum spanning tree <span class="math inline">\(T\)</span>, and we now consider extending <span class="math inline">\(T_{i-1}\)</span> with an edge <span class="math inline">\(e_i\)</span>, which has the smallest weight out of all edges we can use at that point.</li>
+<li>If that edge is not in <span class="math inline">\(T\)</span>, then adding it to <span class="math inline">\(T\)</span> forms a cycle. This cycle crosses from <span class="math inline">\(T_{i-1}\)</span> to the rest of the graph in at least one other place via an edge <span class="math inline">\(v\)</span>.</li>
+<li>Replacing <span class="math inline">\(v\)</span> with <span class="math inline">\(e_i\)</span> in the graph <span class="math inline">\(T\)</span> produces a spanning tree of smaller total weight, which is not possible.</li>
+</ul></li>
+<li>Practice problems: 9.1.1, 9.1.9, 9.1.15</li>
+</ul>
+</body>
+</html>
