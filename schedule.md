@@ -175,33 +175,35 @@ Fri
 ## Week  12 (03/26-03/30)
 
 Mon
-  ~ Greedy Algorithms: Kruskal's, Union-Find (9.2)
+  ~ [Greedy Algorithms: Kruskal's, Union-Find (9.2)](notes/greedy_kruskal.md)
 
-    Lab Assignment 6: Greedy Graph Algorithms
+    [Activity Sheet 15](activities/activities15-greedy.md)
 
 Wed
-  ~ Greedy Algorithms: Dijkstra (9.3)
+  ~ [Greedy Algorithms: Dijkstra (9.3)](notes/greedy_dijkstra.md)
+
+    Lab Assignment 5: Greedy Graph Algorithms
 
     [Lab Assignment 4 Due](assignments/assignment4.md)
 
 Fri
-  ~ Iterative Improvement: Maximum-Flow Problem (10.2)
+  ~ Limitations of Algorithm Power (11.1, 11.2)
 
 ## Week  13 (04/01-04/06)
 
 Mon
-  ~ Iterative Improvement: Maximum Bipartite Matching (10.3)
+  ~ P, NP and NP-Complete Problems (11.3)
 
 Wed
-  ~ Limitations of Algorithm Power (11.1, 11.2)
+  ~ Backtracking, Branch-and-bound (12.1, 12.2)
 
 Fri
-  ~ P, NP and NP-Complete Problems (11.3)
+  ~ Iterative Improvement: Maximum Bipartite Matching (10.3)
 
 ## Week  14 (04/09-04/13)
 
 Mon
-  ~ Backtracking, Branch-and-bound (12.1, 12.2)
+  ~ Review/Catchup
 
 Wed
   ~ Review/Catchup

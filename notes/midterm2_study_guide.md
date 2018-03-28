@@ -24,7 +24,7 @@ This midterm covers chapters 5 through 7. Here is a list of the main ideas:
     - Be able to carry out these transformations to bring a tree into the AVL form.
 12. **2-3 Trees**: Describe the two kinds of nodes that 2-3 trees have, what further property 2-3 trees have, and how to search in a 2-3 tree.
 13. **Heaps**:
-    - A heap is a binary search tree with a very specific structure, satisfying two key conditions. Describe that structure.
+    - A heap is a binary tree with a very specific structure, satisfying two key conditions. Describe that structure.
     - How can we think of a heap instead via an array? How do the indices in the array correspond to the tree structure?
     - What are **priority queues**? Why is a heap a particularly good way to implement a priority queue?
     - Describe the heap-bottom-up construction. What is its time efficiency?
