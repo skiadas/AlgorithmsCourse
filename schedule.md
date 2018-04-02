@@ -180,30 +180,35 @@ Mon
     [Activity Sheet 15](activities/activities15-greedy.md)
 
 Wed
-  ~ [Greedy Algorithms: Dijkstra (9.3)](notes/greedy_dijkstra.md)
-
-    Lab Assignment 5: Greedy Graph Algorithms
+  ~ [Greedy Algorithms: Kruskal's, Union-Find (9.2)](notes/greedy_kruskal.md)
 
     [Lab Assignment 4 Due](assignments/assignment4.md)
 
 Fri
-  ~ Limitations of Algorithm Power (11.1, 11.2)
+  ~ [Greedy Algorithms: Dijkstra (9.3)](notes/greedy_dijkstra.md)
+
+    Lab Assignment 5: Greedy Graph Algorithms
 
 ## Week  13 (04/01-04/06)
 
 Mon
-  ~ P, NP and NP-Complete Problems (11.3)
+  ~ [Limitations of Algorithm Power (11.1)](notes/limitations.md)
+
+    [Activity Sheet 16](activities/activities16-adversary.md)
+
 
 Wed
-  ~ Backtracking, Branch-and-bound (12.1, 12.2)
+  ~ [Decision Trees (11.2)](notes/decision_trees.md)
+
+    P, NP and NP-Complete Problems (11.3)
 
 Fri
-  ~ Iterative Improvement: Maximum Bipartite Matching (10.3)
+  ~ Backtracking, Branch-and-bound (12.1, 12.2)
 
 ## Week  14 (04/09-04/13)
 
 Mon
-  ~ Review/Catchup
+  ~ Iterative Improvement: Maximum Bipartite Matching (10.3)
 
 Wed
   ~ Review/Catchup
