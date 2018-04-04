@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+<link rel="stylesheet" href="https://skiadas.github.io/css/course.css" type="text/css" />
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+<body>
+<h1 id="decision-trees">Decision Trees</h1>
+<ul>
+<li>Read section 11.2 (pages 394-399)</li>
+<li>What is the <strong>decision tree</strong> for an algorithm?</li>
+<li>What can we say about the number of leafs for such a decision tree?</li>
+<li>What is the relation that must hold between the number of leaves in a tree and the height of the tree?
+<ul>
+<li>What is the importance of the relation in terms of a lower bound for the corresponding algorithm?</li>
+</ul></li>
+<li>For the problem of sorting an array of values:
+<ul>
+<li>In terms of thinking of a decision tree for such an algorithm, the possible outcomes are all permutations of the array elements. How many such permutations are there?</li>
+<li><p>A formula due to Stirling (page 477) gives us an estimate for <span class="math inline">\(n!\)</span>:</p>
+<p><span class="math display">\[n! \sim \sqrt{2\pi n}\left(\frac{n}{e}\right)^n\]</span></p>
+How does that relate to the lower estimate for the number of comparisons any sorting algorithm must perform?</li>
+<li>Is the resulting lower bound a tight bound?</li>
+<li>How can we find the average-case efficiency of a comparison-based algorithm using the decision tree?</li>
+</ul></li>
+<li>For the problem of searching for a key in a sorted array:
+<ul>
+<li>How does the decision tree for this problem differ from the previous one?</li>
+<li>At least how many different leaves must such a decision tree have?</li>
+<li>Can this tree ever be a full tree?</li>
+<li>Why is it reasonable to incorporate the equals case into the node itself rather than a child-node? What do the leaves of this new tree represent?</li>
+</ul></li>
+<li>Practice problems: 11.2.2, 11.2.3, 11.2.4, 11.2.5</li>
+</ul>
+</body>
+</html>

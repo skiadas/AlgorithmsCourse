@@ -200,7 +200,9 @@ Mon
 Wed
   ~ [Decision Trees (11.2)](notes/decision_trees.md)
 
-    P, NP and NP-Complete Problems (11.3)
+    [Activity Sheet 17](activities/activities17-decision.md)
+
+    [P, NP and NP-Complete Problems (11.3)](notes/pvsnp.md)
 
 Fri
   ~ Backtracking, Branch-and-bound (12.1, 12.2)

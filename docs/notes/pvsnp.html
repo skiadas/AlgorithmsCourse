@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+<link rel="stylesheet" href="https://skiadas.github.io/css/course.css" type="text/css" />
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+<body>
+<h1 id="p-np-np-complete-problems">P, NP, NP-Complete problems</h1>
+<ul>
+<li>Read section 11.3 (pages 401-409)</li>
+<li>When do we call a problem <strong>tractable</strong>?</li>
+<li>What are some problems that are tractable? What are some problems that are intractable?</li>
+<li>What are <strong>decision problems</strong>? How do we represent the class of all tractable decision problems?</li>
+<li>Are the following problems in P or not?
+<ul>
+<li>Given a graph, determine if the graph is complete.</li>
+<li>Given a graph, determine if the graph has any triangles in it.</li>
+<li>Given a graph, determine if we can assign a given number of colors to the vertices so that adjacent vertices have different colors.</li>
+<li>The traveling salesman problem phrased as a decision problem: Given the city distances and an overall goal C, determine if you can travel through all the cities without ever visiting a city twice except at the end, so that you don’t travel a total distance more than C.</li>
+<li>The Knapsack problem as a decision problem: Given a list of items with values and weights, a knapsack with a given weight limit W and a target value goal V, determine if you can find a set of items that do not exceed the weight limit W but do reach the target value V.</li>
+</ul></li>
+<li>We represent by NP the class of all decision problems that are polynomial-time-verifiable. (this differs from the book definition but is equivalent). Which of the above problems are NP?</li>
+<li>Open question in Computer Science: Is P = NP?</li>
+<li>When do we say that a problem is <strong>polynomially reducible</strong> to another problem?
+<ul>
+<li>Explain how we can polynomially reduce the problem of finding a Hamiltonian path to that of solving the traveling salesman problem.</li>
+</ul></li>
+<li>When is a decision problem called <strong>NP-complete</strong>?
+<ul>
+<li>If a problem <span class="math inline">\(D_1\)</span> is NP-complete, and it can be polynomially reduced to a problem <span class="math inline">\(D_2\)</span>, then that problem is also NP-complete.</li>
+</ul></li>
+<li>Practice problems: 11.3.2, 11.3.4, 11.3.5, 11.3.8, 11.3.9</li>
+</ul>
+</body>
+</html>
