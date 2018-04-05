@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+<link rel="stylesheet" href="https://skiadas.github.io/css/course.css" type="text/css" />
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+<body>
+<h1 id="assignment-5">Assignment 5</h1>
+<p>This fifth and last assignment focuses on the two algorithms for finding a minimum spanning tree for a graph. You will be implementing Prim’s and Kruskal’s algorithms.</p>
+<h2 id="updating-your-repository">Updating your repository</h2>
+<p>Most of the hard work was done in the last lab. All you need to do is fetch and merge the changes I made to the upstream repository.</p>
+<p>Before we start anything, make sure that you have NO uncommitted changes. You must either commit what you have, if it is ready to commit, or stash the changes, allowing you to retrieve them later.</p>
+<ol style="list-style-type: decimal">
+<li>First make sure that your local master is the active branch. It should have a little checkbox next to it.</li>
+<li>We should make sure to bring in the newest version of the upstream remote. Right-click on the “upstream” remote in the “Remotes” section on the left, and choose “fetch upstream”.</li>
+<li>Now right-click on the upstream/master branch within the “Remotes” section to bring up its context menu. One of the options will say “Merge upstream/master onto master”. Click it.</li>
+<li>You should now be ready to go. Whenever you push your changes to your origin, these commits from the upstream will go along with them. If you like, you can go ahead and push now.</li>
+</ol>
+<h2 id="the-assignment">The assignment</h2>
+<h3 id="introductory-stuff">Introductory stuff</h3>
+<p>In this assignment there are two files you will be looking at: <code>Spanning.java</code>, inside <code>src/main/java/utils</code> is the main file that you will have to edit. You may also need to look into the <code>WeightedGraph.java</code> file. It contains an implementation for a weighted graph. This is similar to the simple graph you have used before. You will still want to take a look at the functions provided in that file.</p>
+<p>As in the previous assignment, you will find numerous <code>TODO</code> comments throughout the file. They mark the locations where you need to add something to the implementations. Some times it will be one or two lines, some times it may be more. If you use Eclipse, you can see blue rectangles on the right side of the code indicating the location of all TODOs, and you can click on them to go there. You can keep track of your progress that way, so make sure to remove the TODO from the methods you have already implemented.</p>
+<p>A standard printout of a run of the various methods can be obtained by running the main method of the Spanning class (so running the Spanning class as an application). To do that, you will need to first build using the corresponding gradle task, and then run the <code>runSpanning</code> gradle task from the <code>run</code> group of tasks (you may need to refresh the gradle project and possibly close and reopen the gradle tasks to make it appear).</p>
+<p>Alternatively, you can go to your terminal (or Eclipse’s console), go to the main project folder and run (you may need to run the <code>build</code> gradle task before this works):</p>
+<pre><code>java -cp build/libs/algorithms-assignments.jar utils.Spanning</code></pre>
+<p>If you like to write more tests, you can create test files under <code>/src/test/java</code>. Ask for help if you are not sure how to start those tests. You can use the <code>:test</code> Gradle task to run the tests.</p>
+<p>You should make a new <em>commit</em> in GitKraken after completing each self-contained part, typically after each method you complete. Do not try to commit everything at once.</p>
+<p>When you are done with the assignment, in order to “submit” it, simply <strong>push</strong> your commits via GitKraken. These will now be posted on your account in GitLab and I will be able to follow them from there.</p>
+<h3 id="the-structure-of-the-files">The structure of the files</h3>
+<p>There are two file of concern in this assignment. <code>Spanning.java</code> and <code>WeightedGraph.java</code>.</p>
+<p><code>WeightedGraph.java</code> contains a simple implementation of a weighted graph. You should look at the file to make sure you are familiar with how to add edges to your trees. In particular you will want to familiarize yourself with the following methods in <code>WeightedGraph</code>:</p>
+<ul>
+<li><code>getEdge</code> and <code>hasEdge</code>.</li>
+<li><code>addEdge</code> (two forms).</li>
+<li><code>order</code>.</li>
+<li><code>outgoingEdges</code>.</li>
+</ul>
+<p>There is also an <code>Edge</code> class within <code>WeightedGraph</code> that also has some useful methods:</p>
+<ul>
+<li>First off, the two vertices of an edge are stored in the variables <code>v1</code> and <code>v2</code> respectively, and they are always ordered in numerical order. So the vertex connecting 2 and 3 always have <code>v1=2</code> and <code>v2=3</code> regardless of whether you look at it as going from 3 to 2 or from 2 to 3 when you traverse it.</li>
+<li><code>isAdjacentTo</code> returns whether this edge has the provided vertex as one of its endpoints.</li>
+<li><code>getOtherVertex</code> returns the other vertex in the edge than the one provided. For instance if the edge is connecting 2 to 3, then <code>getOtherVertex(2)=3</code> and <code>getOtherVertex(3)=2</code>.</li>
+</ul>
+<p>The <code>Spanning</code> class is the class where you will implement the two different algorithms. There are two inner classes within <code>Spanning</code>, namely <code>Prim</code> and <code>Kruskal</code>.</p>
+<ul>
+<li>Both are set up so that when the constructor is called, it automatically also runs the algorithm and stores the result in a public <code>tree</code> variable.</li>
+<li>Both use priority queues to hold a list of edges for processing. Note that priority queues in Java are “minimum” priority queues, so the value at the head of the queue is the one with the smallest weight, as we want.</li>
+<li><code>Prim</code> implements Prim’s algorithm.
+<ul>
+<li>It uses a <code>queue</code> priority queue to keep track of the edges that are candidates for the next step.</li>
+<li>While the algorithm as described in books is meant to store the candidate next vertices in the queue, and to update them if a shorter edge to them is found, our algorithm instead stores the edges and does not need to worry about doing any updating. But the queue may end up containing two edges both pointing to the same vertex, and only the shortest of those edges will get used.</li>
+<li>What this means is that when you get the next edge out of the queue, you must first check that this edge does actually lead to a new vertex, and if it doesn’t then simply move on to the next edge.</li>
+<li>For this reason there is also a boolean array <code>visited</code> that keeps track of whether the vertices have been visited already or not (i.e. whether they have become part of the tree).</li>
+</ul></li>
+<li><code>Kruskal</code> implements Kruskal’s algorithm.
+<ul>
+<li>It uses a <code>unionFind</code> array to hold the union-find structure and update it accordingly.</li>
+<li>It also uses a priority <code>queue</code> to hold the edges by their weight.</li>
+</ul></li>
+</ul>
+<h3 id="the-actual-tasks">The actual tasks</h3>
+<p>Now on to the tasks you need to complete. Make sure you have read the previous section for an understanding of the structure of the classes you will be working with.</p>
+<ol style="list-style-type: decimal">
+<li>You should start with Prim’s algorithm. The constructor is provided for you, and a general skeleton as well. The methods you will need to fill in are as follows:
+<ul>
+<li><code>processVertex</code> is a method that “processes” a vertex. What this means is that it marks that vertex as visited, and then loops through the outgoing edges from this vertex.For each of those edges, it looks at what the “other” vertex is (a method in <code>Edge</code> will help with that), and if that other vertex is not visited yet then it adds that edge to the queue.</li>
+<li><code>findUnvisitedVertex</code> is a method that given an edge where one of the vertices is visited and the other is not, returns the one that is not. This is being used when an edge is looked at, to determine which vertex is next.</li>
+<li>Finally, <code>run</code> is the main method. It starts by processing the vertex 1, then loops through the queue until the queue is empty. At each iteration, it looks at the next edge in the queue. If both vertices on that edge are visited, then it simply skips that edge. If not, then one of the two vertices is visited and the other is not. So we must add this edge to our result tree, and we must find and process the vertex on that edge that is not yet visited.</li>
+</ul></li>
+<li>Next up is Kruskal’s algorithm. The constructor and main skeleton is again provided for you. The methods you will need to fill in are as follows:
+<ul>
+<li><code>initializeUnionFind</code> sets up initial values for the <code>unionFind</code> array. You just need to go through and make each vertex “point” to itself.</li>
+<li><code>findRoot</code> finds the “root” of the component in the union-find structure that a given vertex corresponds to. For this you will need to start with the vertex and traverse the <code>unionFind</code> pointers until you find a vertex that points to itself. This is the root, and you must make the initial vertex point directly to the root before returning.</li>
+<li><code>areConnected</code> is a function provided for you. It uses <code>findRoot</code> to determine if two vertices belong to the same unionFind component.</li>
+<li><code>union</code> joins the two components that its argument vertices belong to, by locating the roots for both vertices using <code>findRoot</code> and then making one root point to the other (you will need to make a choice, don’t change both). Your answer will look a lot like <code>areConnected</code>.</li>
+<li><code>addAllEdgesToQueue</code> is another initialization method, that adds all the graph’s edges into a queue. You simply need to loop over all vertices, and for each vertex loop over the outgoing edges, and insert those edges into the queue. BUT you must make sure not to add edges twice, as your loop will visit every edge twice. A simple way to ensure that is to only add the edge if its <code>v1</code> vertex matches the vertex that you are currently looping over.</li>
+<li>Finally, <code>run</code> puts it all together. It starts by initializing the union find structure and the edge list (these steps are part of the provided skeleton), and then there is a loop over the queue structure as long as that structure is nonempty. You will need to process the next edge in the queue, and see if the vertices in it are already connected in the unionFind structure. If they are not, then you must add this edge to your tree and also “union” the vertices in the unionFind.</li>
+</ul></li>
+</ol>
+<p>And we’re done!</p>
+</body>
+</html>

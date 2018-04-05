@@ -187,8 +187,6 @@ Wed
 Fri
   ~ [Greedy Algorithms: Dijkstra (9.3)](notes/greedy_dijkstra.md)
 
-    Lab Assignment 5: Greedy Graph Algorithms
-
 ## Week  13 (04/01-04/06)
 
 Mon
@@ -202,18 +200,20 @@ Wed
 
     [Activity Sheet 17](activities/activities17-decision.md)
 
-    [P, NP and NP-Complete Problems (11.3)](notes/pvsnp.md)
+    [Lab Assignment 5](assignments/assignment5.md)
 
 Fri
-  ~ Backtracking, Branch-and-bound (12.1, 12.2)
+  ~ [P, NP and NP-Complete Problems (11.3)](notes/pvsnp.md)
 
 ## Week  14 (04/09-04/13)
 
 Mon
-  ~ Iterative Improvement: Maximum Bipartite Matching (10.3)
+  ~ Backtracking, Branch-and-bound (12.1, 12.2)
 
 Wed
-  ~ Review/Catchup
+  ~ Iterative Improvement: Maximum Bipartite Matching (10.3)
 
 Fri
   ~ Review (Final on chapters 8-12)
+
+    [Lab Assignment 5 Due](assignments/assignment5.md)
