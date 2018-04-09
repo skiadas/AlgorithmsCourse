@@ -208,10 +208,12 @@ Fri
 ## Week  14 (04/09-04/13)
 
 Mon
-  ~ Backtracking, Branch-and-bound (12.1, 12.2)
+  ~ [Backtracking (12.1)](notes/backtracking.md)
 
 Wed
-  ~ Iterative Improvement: Maximum Bipartite Matching (10.3)
+  ~ Branch-and-bound(12.2)
+
+    Iterative Improvement: Maximum Bipartite Matching (10.3)
 
 Fri
   ~ Review (Final on chapters 8-12)
