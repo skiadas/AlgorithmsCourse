@@ -1,4 +1,4 @@
-# Midterm 1 Study Guide
+# Midterm 2 Study Guide
 
 This midterm covers chapters 5 through 7. Here is a list of the main ideas:
 

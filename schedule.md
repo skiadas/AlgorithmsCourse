@@ -216,6 +216,6 @@ Wed
     Iterative Improvement: Maximum Bipartite Matching (10.3)
 
 Fri
-  ~ Review (Final on chapters 8-12)
+  ~ [Review](notes/midterm3_study_guide.md) (Final on chapters 8,9,12)
 
     [Lab Assignment 5 Due](assignments/assignment5.md)

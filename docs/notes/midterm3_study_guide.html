@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+<link rel="stylesheet" href="https://skiadas.github.io/css/course.css" type="text/css" />
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+<body>
+<h1 id="midterm-3-study-guide">Midterm 3 Study Guide</h1>
+<p>This midterm covers chapters 8, 9 and 11. Here is a list of the main ideas:</p>
+<ol style="list-style-type: decimal">
+<li>Describe the main idea behind <em>dynamic programming</em>, and what kinds of problems it is useful for.</li>
+<li>Describe what the <em>coin-row</em> problem is. How is it solved via a recurrence relation? How can we translate that into a dynamic programming algorithm?</li>
+<li>Describe the <em>change-making</em> problem, and the solution to it. Note that our solution to the change-making problem was different from the book’s, we used a 2-dimensional table for it.</li>
+<li>How can dynamic programming help us solve the <em>Knapsack</em> problem? What are <em>memory functions</em> and what are the advantages and disadvantages of a dynamic programming approach using memory functions vs not using memory functions?</li>
+<li>In a greedy algorithm, each choice made exhibits three key characteristics. What are they? Describe them.</li>
+<li>What are the three different possible approaches we can take in order to prove that a greedy algorithm produces the optimal solution to the problem?</li>
+<li>What is a <em>minimum spanning tree</em>?
+<ul>
+<li>How does <em>Prim’s algorithm</em> proceed to construct a minimum spanning tree?</li>
+<li>What data structure do we need to maintain to assist us with Prim’s algorithm?</li>
+<li>What is the running time of Prim’s algorithm, assuming an adjacency list representation for the graph and a suitable implementation for other needed structures?</li>
+</ul></li>
+<li>How does <em>Kruskal’s algorithm</em> for determining a minimum spanning tree work?
+<ul>
+<li>Kruskal’s algorithm needs to make use of a <em>union-find</em> structure. What is that structure? How does it work?</li>
+<li>Write pseudocode for the various operations in a union-find structure.</li>
+</ul></li>
+<li>Write pseudocode for Prim’s and Kruskal’s algorithms. Be able to use them.</li>
+<li>Describe <em>Dijkstra’s algorithm</em> and the problem it solves. Be able to carry out the algorithm.</li>
+<li>What is the main end result of a <em>lower-bound argument</em>? What does it tell us about a problem?</li>
+<li>How do we find <em>trivial</em> lower bounds?</li>
+<li>Explain the idea of the <em>adversary</em> argument, and use it to demonstrate that any comparison-based algorithm that is searching through a sorted array must take at least <span class="math inline">\(O(\log n)\)</span> time.</li>
+<li>Explain how <em>decision trees</em> lead us to an <em>information-theoretic</em> lower bound, and use it to estimate that searching through a sorted array would take <span class="math inline">\(O(\log n)\)</span> time.</li>
+<li>What decision problems to we classify as being “in <span class="math inline">\(P\)</span>”? What about being “in NP”? Give examples of problems that are in P and problems that are in NP.</li>
+<li>What do we call a <em>reduction</em> from a problem to another? Give examples.</li>
+<li>What problems do we call <em>NP-complete</em>? What is so special about those problems?</li>
+<li>Name some problems that are NP-complete, and describe them.</li>
+</ol>
+</body>
+</html>
