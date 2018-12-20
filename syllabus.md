@@ -28,7 +28,32 @@ Class times
 
 ## Course Description
 
-TODO
+Algorithmic Analysis is the in-depth study of algorithms and their efficiency. Algorithms are ubiquitous in Computer Science; along with Data Structures they constitute the fundamental blocks of any programming activity, namely:
+
+1. How do we represent our application's data/information? (data structures)
+2. How do we process this information to achieve the application's goals? (algorithms)
+3. How do we assess and improve the efficiency of this processing? (algorithmic analysis)
+
+As a very simple example, imagine that you need to process 1 million records with a certain algorithm. With algorithmic analysis you may be able to determine that this algorithm will take at least 10 years to run, and therefore you will have to find some other way around the problem and will not need to spend time actually coding this algorithm.
+
+Algorithmic analysis may also help you determine how an algorithm's running time may grow with the size of the input: If it takes us $10$ seconds to process these $1,000$ records, how long will it take us to process $10,000$ records? The answer really depends on the algorithm we use and its efficiency, exactly the kind of work that algorithmic analysis focuses on.
+
+In this class we will build on your knowledge of basic data structures as well as build on it. Arrays, linked lists and binary trees are the fundamental building blocks for more complicated data structures such as heaps and hash tables, and we will spend considerable time studying these applications.
+
+Along the way we will also have an introduction to the Java programming language. Java is a mainstream language with relatively simple fundamental building blocks and strong support for object-oriented programming. The programming assignments will explore various algorithmic techniques while at the same time building your comfort with Java.
+
+One of the fundamental goals of the class is to introduce you to a bevy of problem-solving techniques, including:
+
+- brute force methods
+- depth-first and breadth-first graph searches
+- decrease-and-conquer techniques (including insertion sort and topological sort)
+- divide-and-conquer techniques (including mergesort and quicksort)
+- transform-and-conquer (for example instance-simplification via presorting or representation-change in 2-3-trees)
+- dynamic programming and other space-time tradeoffs
+- greedy algorithms
+- backtracking and branch-and-bound techniques for algorithmically-hard problems
+
+Lastly, the course introduces you to the limitations of algorithmic power, and the study of the so-called NP-complete problems, which are not believed to be solvable in a polynomial amount of time. These topics will be further explored in our follow-up course, Theory of Computation.
 
 ## Course Components
 
