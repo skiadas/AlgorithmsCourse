@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+<link rel="stylesheet" href="https://skiadas.github.io/css/course.css" type="text/css" />
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+<body>
+<h1 id="the-master-theorem">The Master Theorem</h1>
+<p>The master theorem provides a formula for the time efficiency class of an algorithm whose running time function satisfies a specific recurrence relation, namely:</p>
+<p><span class="math display">\[T(n) = a T\left(\frac{n}{b}\right) + f(n)\]</span></p>
+<p>The most common situation where this relation comes up is the divide-and-conquer algorithms:</p>
+<ul>
+<li><span class="math inline">\(b\)</span> is the factor that determines how much smaller the subproblems are compared to the original problem (often 2 or 3).</li>
+<li><span class="math inline">\(a\)</span> determines how many of the subproblems must be solved (<span class="math inline">\(a=1\)</span> when we do <em>decrease-by-constant-factor</em>).</li>
+<li><span class="math inline">\(f(n)\)</span> is the <strong>glue cost</strong>: How much more work we need to do on top of solving the subproblems in order to solve the original problem.</li>
+</ul>
+<blockquote>
+<p><strong>Master Theorem</strong></p>
+<p>If <span class="math inline">\(f(n) = \Theta\left(n^d\right)\)</span>, then compare <span class="math inline">\(\log_b a\)</span> to <span class="math inline">\(d\)</span> (equivalently compare <span class="math inline">\(a\)</span> to <span class="math inline">\(b^d\)</span>):</p>
+<ul>
+<li>If <span class="math inline">\(\log_b a &gt; d\)</span> (<span class="math inline">\(a &gt; b^d\)</span>) then <span class="math inline">\(f(n) = \Theta\left(n^{\log_b a}\right)\)</span></li>
+<li>If <span class="math inline">\(\log_b a &lt; d\)</span> (<span class="math inline">\(a &lt; b^d\)</span>) then <span class="math inline">\(f(n) = \Theta\left(n^d\right)\)</span></li>
+<li>If <span class="math inline">\(\log_b a = d\)</span> (<span class="math inline">\(a = b^d\)</span>) then <span class="math inline">\(f(n) = \Theta\left(n^d\log n\right)\)</span></li>
+</ul>
+<p>Similar results hold for O and <span class="math inline">\(\Omega\)</span>.</p>
+</blockquote>
+<p><strong>Group work</strong>:</p>
+<ul>
+<li>If <span class="math inline">\(f(n)\)</span> is a constant function, what is <span class="math inline">\(d\)</span>?</li>
+<li>In binary search what are the values of <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span>, <span class="math inline">\(d\)</span>? What does the theorem tell us in that case about the time efficiency of binary search?</li>
+<li>Same question for mergesort.</li>
+<li>Karatsuba’s algorithm for multiplying two n-bit integers has values <span class="math inline">\(a=3\)</span>, <span class="math inline">\(b=2\)</span>, <span class="math inline">\(d=1\)</span>. What does the Master Theorem tell us about the time efficiency of this multiplication?
+<ul>
+<li>How would you normally multiply two n-bit integers? What would be the time efficiency of that algorithm?</li>
+</ul></li>
+<li>Imagine a problem that would normally take <span class="math inline">\(n^3\)</span> time to run with a brute force method. We are trying to instead use a divide-and-conquer algorithm where <span class="math inline">\(b=2\)</span> and <span class="math inline">\(d=2\)</span>. What is the largest number <span class="math inline">\(a\)</span> of subproblems that we can use in our algorithm, so that our algorithm would still be faster than the normal <span class="math inline">\(n^3\)</span> algorithm?</li>
+</ul>
+<h2 id="explanation-of-the-master-theorem">Explanation of the Master Theorem</h2>
+<p>Imagine our divide-and-conquer algorithm in levels:</p>
+<ul>
+<li>At the level <span class="math inline">\(0\)</span> we have to solve <span class="math inline">\(1\)</span> problem of size <span class="math inline">\(n\)</span>.</li>
+<li>At the level <span class="math inline">\(1\)</span> we have to solve <span class="math inline">\(a\)</span> problems of size <span class="math inline">\(n/b\)</span>.</li>
+<li>At the level <span class="math inline">\(2\)</span> we have to solve <span class="math inline">\(a^2\)</span> problems of size <span class="math inline">\(n/b^2\)</span>, as each of the previous <span class="math inline">\(a\)</span> problems were split in subproblems.</li>
+<li>… and so on</li>
+<li>The last level is the level <span class="math inline">\(k\)</span> when <span class="math inline">\(n/b^k = 1\)</span>, so <span class="math inline">\(k = \log_b n\)</span>. At that level we have to solve <span class="math inline">\(a^k=a^{\log_b n} = n^{\log_b a}\)</span> subproblems of size <span class="math inline">\(1\)</span>.</li>
+</ul>
+<p>It clearly will take us <span class="math inline">\(O(n^{\log_b a})\)</span> time to do that. But in order to solve our initial problem, we must also consider all the <em>glue costs</em> at each level, and what they would add up to.</p>
+<p>Now let’s look at the cost of that glueing:</p>
+<ul>
+<li>It costs us <span class="math inline">\(f(n)=n^d\)</span> to glue together the problems at the <span class="math inline">\(0\)</span> level.</li>
+<li>It costs us <span class="math inline">\(f(n/b)=n^d/b^d\)</span> to glue the subproblems of each of the <span class="math inline">\(a\)</span> problems at the <span class="math inline">\(1\)</span> level, for a total of <span class="math inline">\(\frac{a}{b^d} n^d\)</span> cost for that level.</li>
+<li>Similarly it will cost us <span class="math inline">\(\left(\frac{a}{b^d}\right)^2 n^d\)</span> to glue the subproblems at the next level, and so on.</li>
+</ul>
+<p>Let us give a name to this factor <span class="math inline">\(C=\frac{a}{b^d}\)</span>. Then at each level the glue cost is multiplied by <span class="math inline">\(C\)</span>. Therefore the total glue cost is:</p>
+<p><span class="math display">\[n^d + C n^d + C^2 n^d + \cdots + C^{k-1} n^d = \left(1 + C + C^2 + \cdots + C^{k-1}\right) n^d\]</span></p>
+<p>This factor <span class="math inline">\(C\)</span> considers the balance between the fact that our problems are becoming smaller and smaller, so they cost less and less to glue by a factor of <span class="math inline">\(b^d\)</span>, but they are also becoming more and more by a factor of <span class="math inline">\(a\)</span>.</p>
+<ul>
+<li>When <span class="math inline">\(C&gt;1\)</span> (<span class="math inline">\(a/b^d &gt; 1\)</span> or <span class="math inline">\(\log_b a &gt; d\)</span>) the number of problems increases faster than the corresponding decrease in their glue cost, resulting in increasing glue costs at every level.</li>
+<li>When <span class="math inline">\(C&lt;1\)</span> (<span class="math inline">\(a/b^d &lt; 1\)</span> or <span class="math inline">\(\log_b a &lt; d\)</span>) the number of problems increases slower than the corresponding decrease in their glue cost, resulting in decreasing glue costs at every level.</li>
+<li>When <span class="math inline">\(C=1\)</span> the two are in balance, resulting in an equal cost at each level.</li>
+</ul>
+<p>Before considering the different cases, let’s consider the last glue cost, namely the cost on the next-to-last level. We have a cost of <span class="math inline">\(C^{k-1} n^d\)</span>, but since <span class="math inline">\(C\)</span> is a constant this is basically the same as <span class="math inline">\(C^k n^d\)</span>.</p>
+<p>Now keeping in mind that <span class="math inline">\(k=\log_b n\)</span> and that <span class="math inline">\(C=\frac{a}{b^d}\)</span> we have: <span class="math display">\[C^k n^d = C^{\log_b n} n^d = n^{\log_b C} n^d = n^{\log_b a}\]</span> since: <span class="math display">\[\log_b C = \log_b\left(\frac{a}{b^d}\right) = \log_b a - d\]</span></p>
+<p>What this means is that this last glue cost is at least as much as solving all the base case subproblems. Therefore in <strong>order to estimate the total cost of <span class="math inline">\(T(n)\)</span> only the glue costs matter.</strong></p>
+<h3 id="estimating-the-glue-costs">Estimating the glue costs</h3>
+<p>Let us consider the case when <span class="math inline">\(C=1\)</span>. Then the total glue cost for all levels from the above formula is: <span class="math display">\[(1+1+1+\cdots+1) n^d = n^d k = n^d \log_b n = \Theta\left(n^d\log n\right)\]</span></p>
+<p>If <span class="math inline">\(C\neq 1\)</span>, then we can use the geometric sum formula: <span class="math display">\[1+C+C^2+\cdots+C^{k-1} = \frac{C^k-1}{C-1}\]</span> The total glue cost is then: <span class="math display">\[\frac{C^k-1}{C-1} n^d\]</span></p>
+<p>Now, if <span class="math inline">\(C &lt; 1\)</span>, then <span class="math inline">\(\frac{C^k-1}{C-1} = \Theta(1)\)</span>, and therefore the glue cost is <span class="math inline">\(n^d\)</span>.</p>
+<p>Lastly, if <span class="math inline">\(C &gt; 1\)</span> then: <span class="math display">\[\frac{C^k-1}{C-1} = \Theta(C^k) = \Theta(n^{\log_b C})=\Theta\left(n^{\log_b a - d}\right)\]</span> And the total glue cost is then: <span class="math display">\[\Theta(n^{\log_b a - d}n^d)=\Theta\left(n^{\log_b a}\right)\]</span></p>
+<p>So to summarize:</p>
+<ul>
+<li>Solving all the base case subproblems costs <span class="math inline">\(n^{\log_b a}\)</span>. There is no way for the algorithm to do better than that. This is in the same order as the last glue cost, and therefore to estimate the total cost we can focus on the glue costs only.</li>
+<li>If <span class="math inline">\(\log_b a &gt; d\)</span>, then the glue costs add up to the order of <span class="math inline">\(n^{\log_b a}\)</span>, for a total running time of <span class="math inline">\(\Theta(n^{\log_b a})\)</span>.</li>
+<li>If <span class="math inline">\(\log_b a = d\)</span>, then the glue costs add up to <span class="math inline">\(n^{\log_b a}\log n\)</span>, for a total running time of <span class="math inline">\(\Theta(n^d \log n)\)</span>.</li>
+<li>If <span class="math inline">\(\log_b a &lt; d\)</span>, then the glue costs add up to <span class="math inline">\(n^d\)</span>, for a total running time of <span class="math inline">\(\Theta(n^d)\)</span>.</li>
+</ul>
+</body>
+</html>
