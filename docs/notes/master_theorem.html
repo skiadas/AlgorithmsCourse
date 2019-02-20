@@ -26,9 +26,9 @@
 <p><strong>Master Theorem</strong></p>
 <p>If <span class="math inline">\(f(n) = \Theta\left(n^d\right)\)</span>, then compare <span class="math inline">\(\log_b a\)</span> to <span class="math inline">\(d\)</span> (equivalently compare <span class="math inline">\(a\)</span> to <span class="math inline">\(b^d\)</span>):</p>
 <ul>
-<li>If <span class="math inline">\(\log_b a &gt; d\)</span> (<span class="math inline">\(a &gt; b^d\)</span>) then <span class="math inline">\(f(n) = \Theta\left(n^{\log_b a}\right)\)</span></li>
-<li>If <span class="math inline">\(\log_b a &lt; d\)</span> (<span class="math inline">\(a &lt; b^d\)</span>) then <span class="math inline">\(f(n) = \Theta\left(n^d\right)\)</span></li>
-<li>If <span class="math inline">\(\log_b a = d\)</span> (<span class="math inline">\(a = b^d\)</span>) then <span class="math inline">\(f(n) = \Theta\left(n^d\log n\right)\)</span></li>
+<li>If <span class="math inline">\(\log_b a &gt; d\)</span> (<span class="math inline">\(a &gt; b^d\)</span>) then <span class="math inline">\(T(n) = \Theta\left(n^{\log_b a}\right)\)</span></li>
+<li>If <span class="math inline">\(\log_b a &lt; d\)</span> (<span class="math inline">\(a &lt; b^d\)</span>) then <span class="math inline">\(T(n) = \Theta\left(n^d\right)\)</span></li>
+<li>If <span class="math inline">\(\log_b a = d\)</span> (<span class="math inline">\(a = b^d\)</span>) then <span class="math inline">\(T(n) = \Theta\left(n^d\log n\right)\)</span></li>
 </ul>
 <p>Similar results hold for O and <span class="math inline">\(\Omega\)</span>.</p>
 </blockquote>
@@ -37,13 +37,14 @@
 <li>If <span class="math inline">\(f(n)\)</span> is a constant function, what is <span class="math inline">\(d\)</span>?</li>
 <li>In binary search what are the values of <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span>, <span class="math inline">\(d\)</span>? What does the theorem tell us in that case about the time efficiency of binary search?</li>
 <li>Same question for mergesort.</li>
-<li>Karatsuba’s algorithm for multiplying two n-bit integers has values <span class="math inline">\(a=3\)</span>, <span class="math inline">\(b=2\)</span>, <span class="math inline">\(d=1\)</span>. What does the Master Theorem tell us about the time efficiency of this multiplication?
+<li>Karatsuba’s algorithm for multiplying two n-binary-digit integers has values <span class="math inline">\(a=3\)</span>, <span class="math inline">\(b=2\)</span>, <span class="math inline">\(d=1\)</span>. What does the Master Theorem tell us about the time efficiency of this multiplication?
 <ul>
-<li>How would you normally multiply two n-bit integers? What would be the time efficiency of that algorithm?</li>
+<li>How would you normally multiply two n-binary-digit integers? What would be the time efficiency of that algorithm?</li>
 </ul></li>
-<li>Imagine a problem that would normally take <span class="math inline">\(n^3\)</span> time to run with a brute force method. We are trying to instead use a divide-and-conquer algorithm where <span class="math inline">\(b=2\)</span> and <span class="math inline">\(d=2\)</span>. What is the largest number <span class="math inline">\(a\)</span> of subproblems that we can use in our algorithm, so that our algorithm would still be faster than the normal <span class="math inline">\(n^3\)</span> algorithm?</li>
+<li>Imagine a problem that would normally take <span class="math inline">\(n^3\)</span> time to run with a brute force method. We are trying to instead use a divide-and-conquer algorithm where <span class="math inline">\(b=2\)</span> and <span class="math inline">\(d=2\)</span>. What is the largest number <span class="math inline">\(a\)</span> of subproblems that we can use in our algorithm, so that our algorithm would still be faster than the normal <span class="math inline">\(n^3\)</span> algorithm? Begin by making a table of the running time <span class="math inline">\(T(n)\)</span> for <span class="math inline">\(a=1,2,3,...\)</span>.</li>
 </ul>
 <h2 id="explanation-of-the-master-theorem">Explanation of the Master Theorem</h2>
+<h3 id="cost-breakdown">Cost breakdown</h3>
 <p>Imagine our divide-and-conquer algorithm in levels:</p>
 <ul>
 <li>At the level <span class="math inline">\(0\)</span> we have to solve <span class="math inline">\(1\)</span> problem of size <span class="math inline">\(n\)</span>.</li>
@@ -52,7 +53,7 @@
 <li>… and so on</li>
 <li>The last level is the level <span class="math inline">\(k\)</span> when <span class="math inline">\(n/b^k = 1\)</span>, so <span class="math inline">\(k = \log_b n\)</span>. At that level we have to solve <span class="math inline">\(a^k=a^{\log_b n} = n^{\log_b a}\)</span> subproblems of size <span class="math inline">\(1\)</span>.</li>
 </ul>
-<p>It clearly will take us <span class="math inline">\(O(n^{\log_b a})\)</span> time to do that. But in order to solve our initial problem, we must also consider all the <em>glue costs</em> at each level, and what they would add up to.</p>
+<p>It clearly will take us <span class="math inline">\(O(n^{\log_b a})\)</span> time to solve those base case subproblems. But in order to solve our initial problem, we must also consider all the <em>glue costs</em> at each level, and what they would add up to.</p>
 <p>Now let’s look at the cost of that glueing:</p>
 <ul>
 <li>It costs us <span class="math inline">\(f(n)=n^d\)</span> to glue together the problems at the <span class="math inline">\(0\)</span> level.</li>
@@ -65,10 +66,11 @@
 <ul>
 <li>When <span class="math inline">\(C&gt;1\)</span> (<span class="math inline">\(a/b^d &gt; 1\)</span> or <span class="math inline">\(\log_b a &gt; d\)</span>) the number of problems increases faster than the corresponding decrease in their glue cost, resulting in increasing glue costs at every level.</li>
 <li>When <span class="math inline">\(C&lt;1\)</span> (<span class="math inline">\(a/b^d &lt; 1\)</span> or <span class="math inline">\(\log_b a &lt; d\)</span>) the number of problems increases slower than the corresponding decrease in their glue cost, resulting in decreasing glue costs at every level.</li>
-<li>When <span class="math inline">\(C=1\)</span> the two are in balance, resulting in an equal cost at each level.</li>
+<li>When <span class="math inline">\(C=1\)</span> the two are in balance, resulting in an equal cost at each level, but we still need to do <span class="math inline">\(k=\log_b n\)</span> levels.</li>
 </ul>
+<h3 id="base-case-costs-vs-glue-costs">Base case costs vs glue costs</h3>
 <p>Before considering the different cases, let’s consider the last glue cost, namely the cost on the next-to-last level. We have a cost of <span class="math inline">\(C^{k-1} n^d\)</span>, but since <span class="math inline">\(C\)</span> is a constant this is basically the same as <span class="math inline">\(C^k n^d\)</span>.</p>
-<p>Now keeping in mind that <span class="math inline">\(k=\log_b n\)</span> and that <span class="math inline">\(C=\frac{a}{b^d}\)</span> we have: <span class="math display">\[C^k n^d = C^{\log_b n} n^d = n^{\log_b C} n^d = n^{\log_b a}\]</span> since: <span class="math display">\[\log_b C = \log_b\left(\frac{a}{b^d}\right) = \log_b a - d\]</span></p>
+<p>Now keeping in mind that <span class="math inline">\(k=\log_b n\)</span> and that <span class="math inline">\(C=\frac{a}{b^d}\)</span> we have for the last glue cost: <span class="math display">\[C^k n^d = C^{\log_b n} n^d = n^{\log_b C} n^d = n^{\log_b a}\]</span> the second step being some log-magic and the last step being because: <span class="math display">\[\log_b C = \log_b\left(\frac{a}{b^d}\right) = \log_b a - d\]</span></p>
 <p>What this means is that this last glue cost is at least as much as solving all the base case subproblems. Therefore in <strong>order to estimate the total cost of <span class="math inline">\(T(n)\)</span> only the glue costs matter.</strong></p>
 <h3 id="estimating-the-glue-costs">Estimating the glue costs</h3>
 <p>Let us consider the case when <span class="math inline">\(C=1\)</span>. Then the total glue cost for all levels from the above formula is: <span class="math display">\[(1+1+1+\cdots+1) n^d = n^d k = n^d \log_b n = \Theta\left(n^d\log n\right)\]</span></p>

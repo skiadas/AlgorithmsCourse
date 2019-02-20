@@ -14,9 +14,9 @@ The most common situation where this relation comes up is the divide-and-conquer
 >
 > If $f(n) = \Theta\left(n^d\right)$, then compare $\log_b a$ to $d$ (equivalently compare $a$ to $b^d$):
 >
-> - If $\log_b a > d$ ($a > b^d$) then $f(n) = \Theta\left(n^{\log_b a}\right)$
-> - If $\log_b a < d$ ($a < b^d$) then $f(n) = \Theta\left(n^d\right)$
-> - If $\log_b a = d$ ($a = b^d$) then $f(n) = \Theta\left(n^d\log n\right)$
+> - If $\log_b a > d$ ($a > b^d$) then $T(n) = \Theta\left(n^{\log_b a}\right)$
+> - If $\log_b a < d$ ($a < b^d$) then $T(n) = \Theta\left(n^d\right)$
+> - If $\log_b a = d$ ($a = b^d$) then $T(n) = \Theta\left(n^d\log n\right)$
 >
 > Similar results hold for O and $\Omega$.
 
@@ -25,9 +25,9 @@ The most common situation where this relation comes up is the divide-and-conquer
 - If $f(n)$ is a constant function, what is $d$?
 - In binary search what are the values of $a$, $b$, $d$? What does the theorem tell us in that case about the time efficiency of binary search?
 - Same question for mergesort.
-- Karatsuba's algorithm for multiplying two n-bit integers has values $a=3$, $b=2$, $d=1$. What does the Master Theorem tell us about the time efficiency of this multiplication?
-    - How would you normally multiply two n-bit integers? What would be the time efficiency of that algorithm?
-- Imagine a problem that would normally take $n^3$ time to run with a brute force method. We are trying to instead use a divide-and-conquer algorithm where $b=2$ and $d=2$. What is the largest number $a$ of subproblems that we can use in our algorithm, so that our algorithm would still be faster than the normal $n^3$ algorithm?
+- Karatsuba's algorithm for multiplying two n-binary-digit integers has values $a=3$, $b=2$, $d=1$. What does the Master Theorem tell us about the time efficiency of this multiplication?
+    - How would you normally multiply two n-binary-digit integers? What would be the time efficiency of that algorithm?
+- Imagine a problem that would normally take $n^3$ time to run with a brute force method. We are trying to instead use a divide-and-conquer algorithm where $b=2$ and $d=2$. What is the largest number $a$ of subproblems that we can use in our algorithm, so that our algorithm would still be faster than the normal $n^3$ algorithm? Begin by making a table of the running time $T(n)$ for $a=1,2,3,...$.
 
 ## Explanation of the Master Theorem
 
